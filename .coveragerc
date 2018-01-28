@@ -1,0 +1,5 @@
+[run]
+include = arcadia_website/*
+omit = *migrations*, *tests*
+plugins =
+    django_coverage_plugin
