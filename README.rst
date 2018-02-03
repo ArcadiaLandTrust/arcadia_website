@@ -113,3 +113,8 @@ Bootstrap's javascript as well as its dependencies is concatenated into a single
 .. _Bootstrap docs: https://getbootstrap.com/docs/4.0/getting-started/theming/
 
 
+venv/ folder
+^^^^^^
+
+The venv/ folder is for getting a local terminal in pycharm community, which does not contain a remote interpreter option. It is gitignored!
+

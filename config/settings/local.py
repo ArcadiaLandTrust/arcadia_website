@@ -30,6 +30,10 @@ EMAIL_PORT = 1025
 EMAIL_HOST = env('EMAIL_HOST', default='mailhog')
 
 
+# ALLOWED HOSTS
+ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['192.168.99.100', ])
+print("ALLOWED_HOSTS: ", ALLOWED_HOSTS)
+
 # CACHING
 # ------------------------------------------------------------------------------
 CACHES = {
