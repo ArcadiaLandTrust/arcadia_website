@@ -1,6 +1,6 @@
 
 @import "custom_bootstrap_vars";
-@import "bootstrap";
+// @import "bootstrap";
 
 
 
@@ -39,14 +39,14 @@ $red: #b94a48;
   color: $red;
 }
 
-////////////////////////////////
-		//Django Toolbar//
-////////////////////////////////
+.b-alert-error {
+  background-color: $pink;
+  border-color: $dark-pink;
+  color: $red;
+}
 
-// Display django-debug-toolbar.
-// See https://github.com/django-debug-toolbar/django-debug-toolbar/issues/742
-// and https://github.com/pydanny/cookiecutter-django/issues/317
-
-[hidden][style="display: block;"] {
-  display: block !important;
+.c-alert-error {
+  background-color: $pink;
+  border-color: $dark-pink;
+  color: $red;
 }

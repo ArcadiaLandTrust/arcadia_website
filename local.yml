@@ -30,10 +30,10 @@ services:
       - postgres_backup_local:/backups
     environment:
       - POSTGRES_USER=arcadia_website
+      - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
 
   mailhog:
     image: mailhog/mailhog:v1.0.0
     ports:
       - "8025:8025"
-
 

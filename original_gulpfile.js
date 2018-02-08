@@ -15,7 +15,6 @@ var gulp = require('gulp'),
 
       rename = require('gulp-rename'),
       del = require('del'),
-      wait = require('gulp-wait');
       plumber = require('gulp-plumber'),
       pixrem = require('gulp-pixrem'),
       uglify = require('gulp-uglify'),
@@ -115,16 +114,6 @@ gulp.task('runServer', function(cb) {
   });
 });
 
-// Run docker-compose up
-gulp.task('runDockerCompose', function(cb) {
-  var cmd = spawn('docker-compose', ['-f', 'local.yml', 'up'], {stdio: 'inherit'});
-  cmd.on('close', function(code) {
-    console.log('runDockerCompose exited with code ' + code);
-    cb(code);
-  });
-});
-
-
 // Browser sync server for live reload
 gulp.task('browserSync', function() {
     browserSync.init(
@@ -143,20 +132,9 @@ gulp.task('watch', function() {
 
 });
 
-//Wait
-
-  gulp.task('wait', function() {
-        wait(60000);
-  });
-
-
 // Default task
 gulp.task('default', function() {
     runSequence(['styles', 'scripts', 'vendor-scripts', 'imgCompression'], ['runServer', 'browserSync', 'watch']);
 });
 
-// Arcadia task
-// Leaving Default for future reference, this is a simpler dev task set to deal with basics
-gulp.task('arcadia', function() {
-runSequence(['styles', 'scripts', 'vendor-scripts', 'imgCompression'], ['runDockerCompose', 'wait', 'browserSync', 'watch']);
-});
+
