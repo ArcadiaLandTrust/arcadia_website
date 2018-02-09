@@ -11,6 +11,14 @@
 		//Variables//
 ////////////////////////////////
 
+
+// Theme colors
+
+$arc-blue: #3C3F50;
+
+
+
+
 // Alert colors
 
 $white: #fff;
@@ -46,6 +54,12 @@ $red: #b94a48;
 }
 
 .c-alert-error {
+  background-color: $pink;
+  border-color: $dark-pink;
+  color: $red;
+}
+
+.d-alert-error {
   background-color: $pink;
   border-color: $dark-pink;
   color: $red;
