@@ -136,18 +136,12 @@ gulp.task('browserSync', function() {
 // Watch
 gulp.task('watch', function() {
 
-  gulp.watch(paths.sass + '/*.scss', ['styles']);
+  gulp.watch(paths.sass + '/*.scss', ['styles']).on("change", reload);
   gulp.watch(paths.js + '/*.js', ['scripts']).on("change", reload);
   gulp.watch(paths.images + '/*', ['imgCompression']);
   gulp.watch(paths.templates + '/**/*.html').on("change", reload);
 
 });
-
-//Wait
-
-  gulp.task('wait', function() {
-        wait(60000);
-  });
 
 
 // Default task
@@ -155,8 +149,9 @@ gulp.task('default', function() {
     runSequence(['styles', 'scripts', 'vendor-scripts', 'imgCompression'], ['runServer', 'browserSync', 'watch']);
 });
 
-// Arcadia task
+
+// Arcadia task just type "gulp arcadia"
 // Leaving Default for future reference, this is a simpler dev task set to deal with basics
 gulp.task('arcadia', function() {
-runSequence(['styles', 'scripts', 'vendor-scripts', 'imgCompression'], ['runDockerCompose', 'wait', 'browserSync', 'watch']);
+runSequence(['styles', 'scripts', 'vendor-scripts', 'imgCompression'], ['runDockerCompose', 'browserSync', 'watch']);
 });

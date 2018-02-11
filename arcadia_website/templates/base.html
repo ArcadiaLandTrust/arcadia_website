@@ -15,7 +15,7 @@
 
     {% block css %}
     <!--link to minified bootstrap 4 stylesheet in static folder!-->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!--<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">-->
 
     <!-- Your stuff: Third-party CSS libraries go here -->
     {% compress css %}
@@ -27,6 +27,9 @@
     {% endblock %}
 
   </head>
+  <link rel="icon"
+      type="image/png"
+      href="{% static 'images/favicon.ico' %}">
 
   <body>
 
