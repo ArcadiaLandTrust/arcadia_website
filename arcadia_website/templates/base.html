@@ -1,9 +1,9 @@
-{% load static i18n compress%}<!DOCTYPE html>
+{% load static i18n compress %}<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{% block title %}arcadia butt website{% endblock title %}</title>
+    <title>{% block title %}Arcadia Land Trust{% endblock title %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -14,22 +14,21 @@
     <![endif]-->
 
     {% block css %}
-    <!--link to minified bootstrap 4 stylesheet in static folder!-->
-    <!--<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">-->
-
     <!-- Your stuff: Third-party CSS libraries go here -->
     {% compress css %}
-    <!-- This file stores project-specific CSS -->
 
+    <!-- This file stores project-specific CSS -->
     <link href="{% static 'css/project.min.css' %}" rel="stylesheet">
 
     {% endcompress %}
+
+    <!--favicon link-->
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.ico' %}">
+
     {% endblock %}
 
   </head>
-  <link rel="icon"
-      type="image/png"
-      href="{% static 'images/favicon.ico' %}">
+
 
   <body>
 
@@ -76,14 +75,13 @@
 
     </div>
 
-    <div class="container">
+    <div class="container" id="myCustomID">
 
       {% if messages %}
           {% for message in messages %}
               <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>
           {% endfor %}
       {% endif %}
-      <img src="{% static 'images/LogoTransparentBG.png' %}" height="300rem" width="300rem">
 
       {% block content %}
         <p>A Community Land Trust</p>

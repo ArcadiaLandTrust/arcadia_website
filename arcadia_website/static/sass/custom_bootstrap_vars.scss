@@ -1,7 +1,10 @@
 // This file is a custom bootstrap variables file, for over-riding existing bootstrap vars.
 // If you want to over ride a bootstrap var, find it in this file, uncomment it,
 // then change it to what you want.  This protects you from bootstrap updates
-// (in which case the source variables file will be changed)
+// (in which case the source variables file will be changed)...
+// In the case of an update that affects the variable names, go through and cross reference
+// the variables in this with the documentation and apply any changes before switching over.
+
 //// Variables
 ////
 //// Variables should follow the `$component-state-property-size` formula for

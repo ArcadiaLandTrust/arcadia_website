@@ -1,11 +1,13 @@
 
 
-// Here we individually import all bootstrap components from a bootstrap install
-// in node_modules(install using 'npm install bootstrap'). This is the equivalent of using '@import "bootstrap";'
-// When optimizing your site for production, comment out all components not being used
-// This saves space on the compiled CSS meaning faster load times!
+// Here we individually import all bootstrap components from the bootstrap installed with npm in
+// node_modules(install using 'npm install bootstrap'). This is the equivalent of importing bootstrap
+// When optimizing your site for production, comment out import of all components not being used
+// This reduces the compiled CSS size meaning faster load times.
+@import "custom_bootstrap_vars";
 
-// Leave this off and import the components individually
+
+// import the components individually
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "../../../node_modules/bootstrap/scss/variables";
 @import "../../../node_modules/bootstrap/scss/mixins";
@@ -18,14 +20,14 @@
 // @import "../../../node_modules/bootstrap/scss/tables";
 @import "../../../node_modules/bootstrap/scss/forms";
 @import "../../../node_modules/bootstrap/scss/buttons";
-// @import "../../../node_modules/bootstrap/scss/transitions";
+@import "../../../node_modules/bootstrap/scss/transitions";
 @import "../../../node_modules/bootstrap/scss/dropdown";
 @import "../../../node_modules/bootstrap/scss/button-group";
 // @import "../../../node_modules/bootstrap/scss/input-group";
 // @import "../../../node_modules/bootstrap/scss/custom-forms";
 @import "../../../node_modules/bootstrap/scss/nav";
 @import "../../../node_modules/bootstrap/scss/navbar";
-// @import "../../../node_modules/bootstrap/scss/card";
+@import "../../../node_modules/bootstrap/scss/card";
 // @import "../../../node_modules/bootstrap/scss/breadcrumb";
 // @import "../../../node_modules/bootstrap/scss/pagination";
 // @import "../../../node_modules/bootstrap/scss/badge";
@@ -43,6 +45,7 @@
 // @import "../../../node_modules/bootstrap/scss/print";
 
 // Import the base CSS & custom bootstrap vars, which contains your project-specific CSS
-@import "custom_bootstrap_vars";
+
+
 @import "base";
 @import "typography";
