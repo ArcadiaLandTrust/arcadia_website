@@ -17,7 +17,6 @@
     <!-- Your stuff: Third-party CSS libraries go here -->
     {% compress css %}
 
-    <!-- This file stores project-specific CSS -->
     <link href="{% static 'css/project.min.css' %}" rel="stylesheet">
 
     {% endcompress %}
@@ -82,7 +81,6 @@
               <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>
           {% endfor %}
       {% endif %}
-
       {% block content %}
         <p>A Community Land Trust</p>
       {% endblock content %}
