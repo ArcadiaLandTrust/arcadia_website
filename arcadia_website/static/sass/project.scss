@@ -57,7 +57,8 @@
 // Third party sass components (e.g. icons)
 //
 // Font awesome
+@import "fontawesome/fontawesome";
+@import "fontawesome/fa-solid";
+@import "fontawesome/fa-regular";
+@import "fontawesome/fa-brands";
 
-  // Use this to try out everything, I think (development only, large number of files)
-@import "font_awesome/fontawesome";
-//@import "font_awesome/fa-solid";

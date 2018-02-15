@@ -4,10 +4,6 @@
 		//Project Variables//
 ////////////////////////////////
 
-
-// font awesome fonts path
-$fa-font-path:   "../fonts/font_awesome";
-
 // Theme colors
 
 $arc-blue: #3C3F50;
@@ -25,6 +21,29 @@ $black: #000;
 $pink: #f2dede;
 $dark-pink: #eed3d7;
 $red: #b94a48;
+
+
+////////////////////////////////
+		// //
+////////////////////////////////
+
+
+
+
+
+
+#body-text{
+  font-family: Quando-Regular
+}
+
+.quicksand-bold-text{
+  font-family: Quicksand-Bold
+}
+
+
+
+
+
 
 ////////////////////////////////
 		//Alerts//

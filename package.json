@@ -2,6 +2,7 @@
   "name": "arcadia_website",
   "version": "0.1.0",
   "dependencies": {
+    "@fortawesome/fontawesome-free-webfonts": "^1.0.3",
     "child_process": "^1.0.2",
     "package.json": "^2.0.1"
   },
@@ -9,6 +10,7 @@
     "bootstrap": "^4.0.0",
     "browser-sync": "^2.23.6",
     "del": "^2.2.2",
+    "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-concat": "^2.6.1",
