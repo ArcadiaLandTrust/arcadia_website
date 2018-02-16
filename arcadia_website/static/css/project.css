@@ -4921,9 +4921,6 @@ a.text-dark:hover, a.text-dark:focus {
 #body-text {
   font-family: Quando-Regular; }
 
-.quicksand-bold-text {
-  font-family: Quicksand-Bold; }
-
 .alert-debug {
   background-color: #fff;
   border-color: #d6e9c6;
@@ -4938,12 +4935,38 @@ a.text-dark:hover, a.text-dark:focus {
   background: white; }
 
 @font-face {
-  font-family: Quando-Regular;
-  src: url(../fonts/Quando-Regular.ttf); }
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-v18-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Roboto"), local("Roboto-Regular"), url("../fonts/roboto-v18-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v18-latin-regular.woff2") format("woff2"), url("../fonts/roboto-v18-latin-regular.woff") format("woff"), url("../fonts/roboto-v18-latin-regular.ttf") format("truetype"), url("../fonts/roboto-v18-latin-regular.svg#Roboto") format("svg");
+  /* Legacy iOS */ }
 
 @font-face {
-  font-family: Quicksand-Bold;
-  src: url(../fonts/Quicksand-Bold.ttf); }
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/roboto-v18-latin-italic.eot");
+  /* IE9 Compat Modes */
+  src: local("Roboto Italic"), local("Roboto-Italic"), url("../fonts/roboto-v18-latin-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v18-latin-italic.woff2") format("woff2"), url("../fonts/roboto-v18-latin-italic.woff") format("woff"), url("../fonts/roboto-v18-latin-italic.ttf") format("truetype"), url("../fonts/roboto-v18-latin-italic.svg#Roboto") format("svg");
+  /* Legacy iOS */ }
+
+/* quando-regular - latin */
+@font-face {
+  font-family: 'Quando';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/quando-v6-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Quando-Regular"), url("../fonts/quando-v6-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/quando-v6-latin-regular.woff2") format("woff2"), url("../fonts/quando-v6-latin-regular.woff") format("woff"), url("../fonts/quando-v6-latin-regular.ttf") format("truetype"), url("../fonts/quando-v6-latin-regular.svg#Quando") format("svg");
+  /* Legacy iOS */ }
+
+.roboto-text {
+  font-family: Roboto; }
+
+.quando-text {
+  font-family: Quando; }
 
 /*!
  * Font Awesome Free 5.0.6 by @fontawesome - http://fontawesome.com
@@ -7580,8 +7603,8 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Free';
   font-style: normal;
   font-weight: 900;
-  src: url("../fonts/webfonts/fa-solid-900.eot");
-  src: url("../fonts/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../fonts/webfonts/fa-solid-900.woff2") format("woff2"), url("../fonts/webfonts/fa-solid-900.woff") format("woff"), url("../fonts/webfonts/fa-solid-900.ttf") format("truetype"), url("../fonts/webfonts/fa-solid-900.svg#fontawesome") format("svg"); }
+  src: url("../fonts/fontawesome_webfonts/fa-solid-900.eot");
+  src: url("../fonts/fontawesome_webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome_webfonts/fa-solid-900.woff2") format("woff2"), url("../fonts/fontawesome_webfonts/fa-solid-900.woff") format("woff"), url("../fonts/fontawesome_webfonts/fa-solid-900.ttf") format("truetype"), url("../fonts/fontawesome_webfonts/fa-solid-900.svg#fontawesome") format("svg"); }
 
 .fa,
 .fas {
@@ -7596,8 +7619,8 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Free';
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/webfonts/fa-regular-400.eot");
-  src: url("../fonts/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/webfonts/fa-regular-400.woff2") format("woff2"), url("../fonts/webfonts/fa-regular-400.woff") format("woff"), url("../fonts/webfonts/fa-regular-400.ttf") format("truetype"), url("../fonts/webfonts/fa-regular-400.svg#fontawesome") format("svg"); }
+  src: url("../fonts/fontawesome_webfonts/fa-regular-400.eot");
+  src: url("../fonts/fontawesome_webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome_webfonts/fa-regular-400.woff2") format("woff2"), url("../fonts/fontawesome_webfonts/fa-regular-400.woff") format("woff"), url("../fonts/fontawesome_webfonts/fa-regular-400.ttf") format("truetype"), url("../fonts/fontawesome_webfonts/fa-regular-400.svg#fontawesome") format("svg"); }
 
 .far {
   font-family: 'Font Awesome 5 Free';
@@ -7611,8 +7634,8 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Brands';
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/webfonts/fa-brands-400.eot");
-  src: url("../fonts/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../fonts/webfonts/fa-brands-400.woff2") format("woff2"), url("../fonts/webfonts/fa-brands-400.woff") format("woff"), url("../fonts/webfonts/fa-brands-400.ttf") format("truetype"), url("../fonts/webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
+  src: url("../fonts/fontawesome_webfonts/fa-brands-400.eot");
+  src: url("../fonts/fontawesome_webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome_webfonts/fa-brands-400.woff2") format("woff2"), url("../fonts/fontawesome_webfonts/fa-brands-400.woff") format("woff"), url("../fonts/fontawesome_webfonts/fa-brands-400.ttf") format("truetype"), url("../fonts/fontawesome_webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
 
 .fab {
   font-family: 'Font Awesome 5 Brands'; }
