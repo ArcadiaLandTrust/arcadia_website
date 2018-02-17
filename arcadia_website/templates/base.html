@@ -1,4 +1,12 @@
 {% load static i18n compress %}<!DOCTYPE html>
+
+<!--TODO: favicon-->
+<!--TODO: small navbar logo (use canva)-->
+<!--TODO: navbar links-->
+<!--TODO: navbar font-->
+<!--TODO: navbar styling-->
+
+<!--TODO: footer with social media links using font awesome-->
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -33,7 +41,7 @@
 
   <body>
 
-    <div class="m-b-1">
+    <div class="m-b-1"><!--margin bottom 1-->
       <nav class="navbar navbar-expand-md navbar-light bg-light">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -76,15 +84,15 @@
 
     </div>
 
-    <div class="container" id="myCustomID">
+    <div class="container-fluid" id="myCustomID">
 
       {% if messages %}
           {% for message in messages %}
               <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>
           {% endfor %}
       {% endif %}
+
       {% block content %}
-        <p>A Community Land Trust</p>
       {% endblock content %}
 
     </div> <!-- /container -->
