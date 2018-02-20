@@ -1,120 +1,158 @@
 {% load static i18n compress %}<!DOCTYPE html>
 
-<!--TODO: favicon-->
-<!--TODO: small navbar logo (use canva)-->
+<!--TODO: small navbar logo (use canva/inkscape)-->
 <!--TODO: navbar links-->
 <!--TODO: navbar font-->
 <!--TODO: navbar styling-->
 
 <!--TODO: footer with social media links using font awesome-->
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{% block title %}Arcadia Land Trust{% endblock title %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{% block title %}Arcadia Land Trust{% endblock title %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <![endif]-->
 
-    {% block css %}
-    <!-- Your stuff: Third-party CSS libraries go here -->
-    {% compress css %}
+  {% block css %}
+  <!-- Your stuff: Third-party CSS libraries go here -->
+  {% compress css %}
 
-    <link href="{% static 'css/project.min.css' %}" rel="stylesheet">
-    <!--<link href="{% static 'css/fontawesome-all.min.css' %}" rel="stylesheet">-->
-    <!--<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">-->
+  <link href="{% static 'css/project.min.css' %}" rel="stylesheet">
 
-    {% endcompress %}
+  {% endcompress %}
 
-    <!--favicon link-->
-    <link rel="icon" type="image/png" href="{% static 'images/favicon.ico' %}">
+  <!--favicon link-->
+  <link rel="icon" type="image/png" href="{% static 'images/favicon.ico' %}">
 
-    {% endblock %}
+  {% endblock %}
 
-  </head>
+</head>
 
 
-  <body>
+<body>
 
-    <div class="m-b-1"><!--margin bottom 1-->
-      <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="{% url 'home' %}">
-        Arcadia
-        </a>
+<div class="m-b-1"><!--margin bottom 1-->
+  <nav class="navbar static-top navbar-expand-md navbar-light">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="{% url 'home' %}">
+      Arcadia</a>
+    <a><i class="navbar-brand fab fa-twitter"></i></a>
+    <a><i class="navbar-brand fab fa-facebook-square"></i></a>
+    <a><i class="navbar-brand fab fa-github-square"></i></a>
+    <a><i class="navbar-brand fab fa-instagram"></i></a>
 
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'about' %}">About</a>
-            </li>
-            {% if request.user.is_authenticated %}
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a>
-              </li>
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a class="nav-link" href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a>
-              </li>
-            {% else %}
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a id="sign-up-link" class="nav-link" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a>
-              </li>
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a id="log-in-link" class="nav-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
-              </li>
-            {% endif %}
-          </ul>
-        </div>
-      </nav>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'about' %}">About</a>
+        </li>
+        {% if request.user.is_authenticated %}
+        <li class="nav-item">
+          {# URL provided by django-allauth/account/urls.py #}
+          <a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a>
+        </li>
+        <li class="nav-item">
+          {# URL provided by django-allauth/account/urls.py #}
+          <a class="nav-link" href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          {# URL provided by django-allauth/account/urls.py #}
+          <a id="sign-up-link" class="nav-link" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a>
+        </li>
+        <li class="nav-item">
+          {# URL provided by django-allauth/account/urls.py #}
+          <a id="log-in-link" class="nav-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+  </nav>
+
+</div>
+
+<div class="container-fluid" id="myCustomID">
+
+  {% if messages %}
+  {% for message in messages %}
+  <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>
+  {% endfor %}
+  {% endif %}
+
+  {% block content %}
+  {% endblock content %}
+
+</div> <!-- /container -->
+
+{% block modal %}{% endblock modal %}
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+{% block javascript %}
+
+<!-- Vendor dependencies bundled as one file-->
+{% compress js %}
+<script src="{% static 'js/vendors.js' %}"></script>
+{% endcompress %}
+
+<!-- place project specific Javascript in this file -->
+{% compress js %}
+<script src="{% static 'js/project.js' %}"></script>
+{% endcompress %}
+
+{% endblock javascript %}
+
+<div class="container-fluid footer-main">
+  <div class="row">
+    <div class="col-sm-3">
+      <h6>Copyright Arcadia Land Trust, 2018.</h6>
+      <h6>coded by <a href="#">Stanton Burton</a></h6>
+    </div>
+    <div class="col-sm-3">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">about us</li>
+        <li class="list-group-item">programs</li>
+        <li class="list-group-item">projects</li>
+        <li class="list-group-item">contact</li>
+      </ul>
+    </div>
+    <div class="col-sm-3">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <i class="fab fa-facebook-square"></i>
+        </li>
+        <li class="list-group-item">
+          <i class="fab fa-twitter"></i></li>
+        <li class="list-group-item">
+          <i class="fab fa-instagram"></i>
+        </li>
+        <li class="list-group-item">
+          <i class="fab fa-github-square"></i>
+        </li>
+        <li class="list-group-item">mastodon!</li>
+      </ul>
+    </div>
+    <div class="col-sm-3">
+      <h6>a tiny header</h6>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, sequi, esse! Quae, ratione! Qui repudiandae aliquam doloremque, deleniti, saepe veritatis? Quas non, id placeat dolorum at molestiae, aut commodi omnis!</p>
 
     </div>
-
-    <div class="container-fluid" id="myCustomID">
-
-      {% if messages %}
-          {% for message in messages %}
-              <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>
-          {% endfor %}
-      {% endif %}
-
-      {% block content %}
-      {% endblock content %}
-
-    </div> <!-- /container -->
-
-    {% block modal %}{% endblock modal %}
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    {% block javascript %}
-
-      <!-- Vendor dependencies bundled as one file-->
-      {% compress js %}
-      <script src="{% static 'js/vendors.js' %}"></script>
-      {% endcompress %}
-
-      <!-- place project specific Javascript in this file -->
-      {% compress js %}
-      <script src="{% static 'js/project.js' %}"></script>
-      {% endcompress %}
-
-    {% endblock javascript %}
-  </body>
+  </div>
+</div>
+</body>
 </html>
 

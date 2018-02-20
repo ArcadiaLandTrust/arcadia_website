@@ -2,27 +2,31 @@
 {% load static i18n compress %}
 {% block content %}
 <!--remember everything in the extender pages is inside a container-fluid-->
-    <!--TODO: fluid container top-->
-    <!--TODO: split bottom 70%/30%-->
-    <!--TODO: main logo changed to "a community land trust" subtitle-->
+<!--TODO: fluid container top-->
+<!--TODO: split bottom 70%/30%-->
+<!--TODO: main logo changed to "a community land trust" subtitle-->
 
 
-    <img src="{% static 'images/LogoTransparentBG.png' %}" class="mx-auto d-block" height="30%">
-<div class="quando-text">
-  <i class="fas fa-camera-retro"></i>
-  Welcome to the homepage of Arcadia Land Trust, a <i>non-profit land trust</i> based in Ashland City, TN
 
-  </center>
-</div>
+  <img src="{% static 'images/LogoTransparentBG.png' %}" class="mx-auto d-block" height="30%">
 
-<div class="roboto-text">
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit laudantium numquam omnis porro repellendus rerum totam? Ex, magnam odit? Ab alias dolor, esse laboriosam omnis totam. Expedita nihil qui quia!
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam atque, consequuntur delectus dolor excepturi facilis impedit ipsa modi obcaecati officiis omnis porro possimus quaerat quod sequi totam unde velit.
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci, consequatur culpa dolorem ex illo illum impedit labore magni natus nisi pariatur possimus quasi qui quis quo, rem sed veniam?
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolor doloribus dolorum, error exercitationem id ipsam minus nostrum nulla optio quas recusandae reiciendis repellat sed sunt, suscipit totam unde, voluptatibus.
-  </p>
+    <h3 class="mx-auto d-block">
+      Welcome to the homepage of Arcadia Land Trust, a <i>non-profit land trust</i> based in Ashland City, TN
+    </h3>
 
-  </p>
-</div>
-{% endblock content %}
+
+
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit laudantium numquam omnis porro repellendus rerum totam? Ex, magnam odit? Ab alias dolor, esse laboriosam omnis totam. Expedita nihil qui quia!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam atque, consequuntur delectus dolor excepturi facilis impedit ipsa modi obcaecati officiis omnis porro possimus quaerat quod sequi totam unde velit.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci, consequatur culpa dolorem ex illo illum impedit labore magni natus nisi pariatur possimus quasi qui quis quo, rem sed veniam?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolor doloribus dolorum, error exercitationem id ipsam minus nostrum nulla optio quas recusandae reiciendis repellat sed sunt, suscipit totam unde, voluptatibus.
+      </p>
+    </div>
+    <div class="col-2"></div>
+  </div>
+
+  {% endblock content %}

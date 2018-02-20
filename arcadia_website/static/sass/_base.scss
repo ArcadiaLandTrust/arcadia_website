@@ -4,23 +4,19 @@
 		//Project Variables//
 ////////////////////////////////
 
-// Theme colors
-
-$arc-blue: #3C3F50;
-
 
 // Fonts
 
 $arc-header: Quando;
 
-// Alert colors
 
-$white: #fff;
-$mint-green: #d6e9c6;
-$black: #000;
-$pink: #f2dede;
-$dark-pink: #eed3d7;
-$red: #b94a48;
+
+
+// Navbar
+//
+nav.navbar-light {
+  background: $arc-blue;
+  }
 
 
 ////////////////////////////////
@@ -35,7 +31,14 @@ $red: #b94a48;
 
 
 
-
+/* page footer */
+.footer-main {
+    background-color: $arc-blue;
+    color: white;
+    font-size: 0.8rem;
+    padding: 2.5rem 0 0 0;
+    margin: 0;
+}
 
 
 
