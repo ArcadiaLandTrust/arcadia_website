@@ -1,11 +1,9 @@
 {% load static i18n compress %}<!DOCTYPE html>
 
-<!--TODO: small navbar logo (use canva/inkscape)-->
-<!--TODO: navbar links-->
+<!--TODO: navbar links & social media, etc-->
 <!--TODO: navbar font-->
-<!--TODO: navbar styling-->
-
-<!--TODO: footer with social media links using font awesome-->
+<!--TODO: navbar styling & behavior on collapse-->
+<!--TODO: add mastodon icon to footer social media links-->
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -44,7 +42,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="{% url 'home' %}">
-      Arcadia</a>
+      <img src="{% static 'images/navbar_logo_1.png' %}"></a>
     <a><i class="navbar-brand fab fa-twitter"></i></a>
     <a><i class="navbar-brand fab fa-facebook-square"></i></a>
     <a><i class="navbar-brand fab fa-github-square"></i></a>
@@ -119,8 +117,8 @@
 <div class="container-fluid footer-main">
   <div class="row">
     <div class="col-sm-3">
-      <h6>Copyright Arcadia Land Trust, 2018.</h6>
-      <h6>coded by <a href="#">Stanton Burton</a></h6>
+      <p>Copyright Arcadia Land Trust, 2018.</p>
+      <p>coded by <a href="#">Stanton Burton</a></p>
     </div>
     <div class="col-sm-3">
       <ul class="list-group list-group-flush">
@@ -153,6 +151,7 @@
     </div>
   </div>
 </div>
+
 </body>
 </html>
 
