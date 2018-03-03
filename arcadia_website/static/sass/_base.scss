@@ -5,27 +5,28 @@
 ////////////////////////////////
 
 
-// Fonts
 
+/////////////////////////////////
+// Fonts
+/////////////////////////////////
 $arc-header: Quando;
 
 
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-}
 
-
+//////////////////////////////////
 // Navbar
-//
+//////////////////////////////////
+
+
 nav.navbar-light {
   background: $arc-blue;
   }
 
+
 a.dropdown-item {
     color: white;
 }
+
 
 a.dropdown-item:hover {
   background-color: $arc-blue-light;
@@ -41,21 +42,39 @@ a.dropdown-item:hover {
   margin-bottom: .2rem !important;
 }
 
-////////////////////////////////
-		// //
-////////////////////////////////
 
 
+////////////////////////////////
 // Body
-.main-container {
+////////////////////////////////
+
+
+html, body {
   height: 100%;
+  width: 100%;
+  margin: 0;
 }
 
+
+.main-container {
+  height: 100%;
+  width: 100%;
+  border-top: 4px solid hsl(153, 48, 53) !important;
+  border-bottom: 40px solid pink !important;
+}
+
+
+
+/////////////////////////////////
 //Banner
+/////////////////////////////////
+
 
 .banner-container {
   height: 50%;
   margin-top: 2.5%
+  border: 4px solid pink !important;
+  padding: 10px;
 }
 
 .banner-header {
@@ -78,10 +97,13 @@ a.dropdown-item:hover {
 .banner-tagline {
   font-style: italic;
   padding-top: 1.5rem;
+  font-size: .9rem;
 }
 
-
+///////////////////////////////////
 //CSS-Grid Stuff
+///////////////////////////////////
+
 
 //remove bootstrap styles that are incompatible with css-grid at container level
 // see https://open.nytimes.com/bootstrap-to-css-grid-87b3f5f830e4
@@ -93,9 +115,10 @@ a.dropdown-item:hover {
       display: none;
     }
     div[class^="col-"] {
-      width: 99% !important;
+      width: 90% !important;
       padding: 0;
     }
+    // change the bootstrap row to grid
     .row {
       display: grid;
       margin: 0;
@@ -116,20 +139,21 @@ a.dropdown-item:hover {
       grid-row-gap: 7px;
       padding: 5px;
       grid-template-columns: 1fr;
+
+      .block {
+        height: 100%;
+        margin-bottom: 0;
+	      background: #efefef;
+	      padding: 1px 10px;
+	      border-radius: 19px / 6px;
+	      box-shadow: 1px 2px 3px 1px #111;
+	      margin-bottom: 20px;
+	      @media(min-width: 992px) {
+		    height: 400px;
+		    }
+      }
     }
-
-    //stretch blocks to height of the grid container
-    .block {
-      height: 100%;
-      margin-bottom: 0;
-    }
-
-
-
   }
-
-
-}
 
 //section component (box for grid on homepage)
 .section {

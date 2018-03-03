@@ -1,22 +1,49 @@
 {% extends "base.html" %}
 {% load static i18n compress %}
 {% block content %}
-<!--remember everything in the extender pages is inside a container-fluid-->
-<!--TODO: fluid container top-->
-<!--TODO: split bottom 70%/30%-->
 
-
+<!--everything in the extended pages is inside a container-fluid-->
 <!--Begin CSS Grid + Bootstrap experiment-->
-<!--TODO: reduce whitespace on logo, esp on bottom, to accomodate header text
-    TODO: change main logo to "a " + "community land trust"-->
 
-  <div class="banner-container text-center">
+  <div class="container-fluid banner-container text-center">
+
     <h1 class="banner-header">Arcadia</h1>
     <h6 class="banner-header banner-sub-header">a community land trust</h6>
     <img src="{% static 'images/arcadia_flower.png' %}" class="banner-logo my-t">
-    <h6 class="banner-header banner-tagline">Community-led land stewardship for middle tennessee</h6>
+    <h6 class="banner-header banner-tagline">Community-led land stewardship for Middle Tennessee</h6>
+
   </div>
 
+<div class="container-fluid css-grid-container css-grid--block">
+
+  <div class="row">
+
+    <div class="col-md-4 col-lg-3">
+      <div class="block">
+        <h1>Block Header</h1>
+        <p>This line is longer, but it doesn't break anything!</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3">
+      <div class="block">
+        <h1>Block Header</h1>
+        <p>This is a paragraph sentence.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3">
+      <div class="block">
+        <h1>Block Header</h1>
+        <p>This is a paragraph sentence.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  </div>
+</div>
     <div class="section meet-arcadia">
       Meet Arcadia
       <ul>
