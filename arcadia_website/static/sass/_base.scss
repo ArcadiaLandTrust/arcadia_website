@@ -10,6 +10,11 @@
 $arc-header: Quando;
 
 
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
 
 
 // Navbar
@@ -18,30 +23,161 @@ nav.navbar-light {
   background: $arc-blue;
   }
 
+a.dropdown-item {
+    color: white;
+}
+
+a.dropdown-item:hover {
+  background-color: $arc-blue-light;
+  color: $arc-brown;
+  }
+
+
+.arc-main-nav-item {
+  font-size: 1.1rem;
+  padding-right: 2rem !important;
+  padding-left: 0rem !important;
+  margin-top: .1rem !important;
+  margin-bottom: .2rem !important;
+}
 
 ////////////////////////////////
 		// //
 ////////////////////////////////
 
 
+// Body
+.main-container {
+  height: 100%;
+}
 
-#body-text{
-  font-family: Quando-Regular
+//Banner
+
+.banner-container {
+  height: 50%;
+  margin-top: 2.5%
+}
+
+.banner-header {
+  font-family: $arc-header;
+  color: $arc-blue;
+}
+
+.banner-logo {
+  margin-top: 1.5rem;
+  padding: 0;
+}
+
+.banner-sub-header {
+  font-variant: small-caps;
+  letter-spacing: .4rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.banner-tagline {
+  font-style: italic;
+  padding-top: 1.5rem;
+}
+
+
+//CSS-Grid Stuff
+
+//remove bootstrap styles that are incompatible with css-grid at container level
+// see https://open.nytimes.com/bootstrap-to-css-grid-87b3f5f830e4
+
+.css-grid-container {
+  @supports(display: grid) {
+    padding: 0;
+    &:before {
+      display: none;
+    }
+    div[class^="col-"] {
+      width: 99% !important;
+      padding: 0;
+    }
+    .row {
+      display: grid;
+      margin: 0;
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+  // make changes to our blocks at the container level
+  // using "block" term to represent blocks of content on the grid
+
+.css-grid--block {
+  @supports(display: grid) {
+    .row {
+      grid-column-gap: 5px;
+      grid-row-gap: 7px;
+      padding: 5px;
+      grid-template-columns: 1fr;
+    }
+
+    //stretch blocks to height of the grid container
+    .block {
+      height: 100%;
+      margin-bottom: 0;
+    }
+
+
+
+  }
+
+
+}
+
+//section component (box for grid on homepage)
+.section {
+
 }
 
 
 
+.meet-arcadia {
+
+}
+
+
+.newsletter {
+
+}
+
+
+/////////////////////////////////
 /* page footer */
+
 .footer-main {
     background-color: $arc-blue;
     color: white;
     font-size: 0.8rem;
-    padding: 2.5rem 0 0 0;
+    padding: 0 0 0 0;
     margin: 0;
+  .top-row {
+    padding: 0px 0px !important;
+    margin: 0px 0px !important;
+   }
+  div[class^="col-"] {
+    margin-top: 2rem;
+  }
+  p {
+  }
+  .footer-newsletter {
+    line-height: 1.6 !important;
+  }
+  .copyright {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: .3rem;
+  }
+  .btn {
+    margin-top: 1rem;
+  }
 }
-
-
-
 
 ////////////////////////////////
 		//Alerts//

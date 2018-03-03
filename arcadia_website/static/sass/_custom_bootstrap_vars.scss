@@ -70,6 +70,7 @@
 //), $colors);
 //
 //$primary:       $blue !default;
+$primary:       $arc-green;
 //$secondary:     $gray-600 !default;
 //$success:       $green !default;
 //$info:          $cyan !default;
@@ -540,7 +541,9 @@
 //$dropdown-padding-y:                .5rem !default;
 //$dropdown-spacer:                   .125rem !default;
 //$dropdown-bg:                       $white !default;
+$dropdown-bg:                       rgba($arc-blue, .95);
 //$dropdown-border-color:             rgba($black, .15) !default;
+$dropdown-border-color:             $arc-brown;
 //$dropdown-border-radius:            $border-radius !default;
 //$dropdown-border-width:             $border-width !default;
 //$dropdown-divider-bg:               $gray-200 !default;
@@ -549,6 +552,7 @@
 //$dropdown-link-color:               $gray-900 !default;
 //$dropdown-link-hover-color:         darken($gray-900, 5%) !default;
 //$dropdown-link-hover-bg:            $gray-100 !default;
+
 //
 //$dropdown-link-active-color:        $component-active-color !default;
 //$dropdown-link-active-bg:           $component-active-bg !default;

@@ -2,12 +2,12 @@
 // Explanation
 // Here we individually import all bootstrap components from the bootstrap installed with npm in
 // node_modules(install using 'npm install bootstrap'). This is the equivalent of '@import bootstrap'.
-// When optimizing your site for production, comment out import of all components not being used
+// When optimizing your site for production, comment out import of all bootstrap components not being used
 // This reduces the compiled CSS size meaning faster load times.
 
 
 /////Project component partials
-// Import your project base & component sass partials
+// Import your project base & component partials
 //
 @import "colors";
 @import "typography";
@@ -17,6 +17,7 @@
 ////////////Custom Bootstrap Variables
 // import custom bootstrap variable overrides first, so they take precedence
 @import "custom_bootstrap_vars";
+
 
 ///////////////////Bootstrap Components
 //
