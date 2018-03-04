@@ -2,64 +2,70 @@
 {% load static i18n compress %}
 {% block content %}
 
-<!--everything in the extended pages is inside a container-fluid-->
-<!--Begin CSS Grid + Bootstrap experiment-->
-
   <div class="container-fluid banner-container text-center">
-
-    <h1 class="banner-header">Arcadia</h1>
-    <h6 class="banner-header banner-sub-header">a community land trust</h6>
-    <img src="{% static 'images/arcadia_flower.png' %}" class="banner-logo my-t">
+    <h1 class="banner-header my-auto">Arcadia</h1>
+    <h6 class="banner-header banner-sub-header my-auto">a community land trust</h6>
+    <img src="{% static 'images/arcadia_flower.png' %}" class="banner-logo mx-auto">
     <h6 class="banner-header banner-tagline">Community-led land stewardship for Middle Tennessee</h6>
-
-  </div>
-
-<div class="container-fluid css-grid-container css-grid--block">
-
-  <div class="row">
-
-    <div class="col-md-4 col-lg-3">
-      <div class="block">
-        <h1>Block Header</h1>
-        <p>This line is longer, but it doesn't break anything!</p>
-      </div>
-    </div>
-
-    <div class="col-md-4 col-lg-3">
-      <div class="block">
-        <h1>Block Header</h1>
-        <p>This is a paragraph sentence.</p>
-      </div>
-    </div>
-
-    <div class="col-md-4 col-lg-3">
-      <div class="block">
-        <h1>Block Header</h1>
-        <p>This is a paragraph sentence.</p>
-      </div>
-    </div>
   </div>
 
 
+  <div class="container-fluid css-grid-container css-grid--card">
 
+      <div class="row">
+
+          <div class="col-md-4 col-lg-3 meet-arcadia">
+              <div class="card">
+                  <h1>Meet Arcadia</h1>
+
+                  <div class="">
+                      <ul>
+                        <li>For Landowners</li>
+                        <li>For Land Seekers</li>
+                        <li>For Farmers and Stewards</li>
+                        <li>For Community Partners</li>
+                      </ul>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, autem cupiditate deserunt dicta ea earum eum id ipsum laudantium maxime obcaecati quia quibusdam quisquam, repellendus, saepe sunt veniam vero!</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-md-4 col-lg-3">
+              <div class="card">
+                  <h1>Some content!</h1>
+                  <div class="image-container">
+                      <img src="https://pbs.twimg.com/media/Cq-inMBWEAAZyZ_.jpg"
+                           alt="My cats (Lumen and Waffle) cuddled up in a blanket"/>
+                  </div>
+                  <p> This line is longer, but it doesn't break anything!</p>
+
+              </div>
+          </div>
+              </div>
+          </div>
+      </div>
   </div>
-</div>
-    <div class="section meet-arcadia">
-      Meet Arcadia
-      <ul>
-        <li>For Landowners</li>
-        <li>For Land Seekers</li>
-        <li>For Farmers and Stewards</li>
-        <li>For Community Partners</li>
-      </ul>
-    </div>
 
-    <div class="section newsletter">
-      Stay in the loop
-    </div>
 
-    <div class="section news">
-    </div>
+
+
+
+
+
+
+    <!--<div class="section meet-arcadia">-->
+      <!--<div class="image-container">-->
+                      <!--<img src="{% static 'images/arcadia_flower.png' %}"-->
+                           <!--alt="My cats cuddled up in a blanket"/>-->
+      <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="section newsletter">-->
+      <!--Stay in the loop-->
+    <!--</div>-->
+
+    <!--<div class="section news">-->
+    <!--</div>-->
 
 <!--End CSS grid experiment-->
 

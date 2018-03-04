@@ -5,13 +5,11 @@
 // When optimizing your site for production, comment out import of all bootstrap components not being used
 // This reduces the compiled CSS size meaning faster load times.
 
-
 /////Project component partials
 // Import your project base & component partials
 //
 @import "colors";
 @import "typography";
-@import "base";
 
 
 ////////////Custom Bootstrap Variables
@@ -61,6 +59,12 @@
 @import "../../../node_modules/bootstrap/scss/utilities";
 @import "../../../node_modules/bootstrap/scss/print";
 
+
+
+//////////////////////////////////////// Base scss
+//
+// Contains the meat of your scss
+@import "base";
 
 ////////////////////////////////////////////////Third party Sass components
 // Third party sass components (e.g. icons)

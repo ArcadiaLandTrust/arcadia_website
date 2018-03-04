@@ -31,10 +31,7 @@
   {% endblock %}
 
 </head>
-
-
 <body>
-
 
 <!--navbar-->
 <div class="m-b-1">
@@ -105,7 +102,6 @@
           <a class="nav-link" href="{% url 'about' %}">Contact</a>
         </li>
 
-
       </ul>
 
 
@@ -151,22 +147,26 @@
 <!--content begins here-->
 <!--*********************************************-->
 
+
 <!--<div class="container-fluid main-container" id="myCustomID">-->
 
   {% if messages %}
   {% for message in messages %}
-  <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>
+  <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}
+  </div>
   {% endfor %}
   {% endif %}
+
 
   {% block content %}
   {% endblock content %}
 
-</div> <!--*************************************-->
+<!--*************************************-->
 
 {% block modal %}{% endblock modal %}
 
 {% load crispy_forms_tags %}
+
 
 <div class="container-fluid footer-main">
   <div class="top-row row">
@@ -217,7 +217,7 @@
           <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
             {% csrf_token %}
             {{ form|crispy }}
-            <input type="email" name="email" placeholder="name@example.com"/>
+            <input type="email" name="email" placeholder="name@example.com" class="newsletter-email-input"/>
             <br>
             <button class="btn btn-primary" type="submit">{% trans "Sign Up" %} &raquo;</button>
           </form>
@@ -230,7 +230,7 @@
 
   <div class="row">
     <div class="col">
-      <p class="copyright">Copyright Arcadia Land Trust, 2018. Site coded by <a href="#">Stanton Burton</a> Please forward any bugs via our contact page.</p>
+      <p class="copyright">Copyright Arcadia Land Trust, 2018. Site coded by <a href="#">Stanton Burton</a>. Please forward any bugs via our contact page.</p>
     </div>
   </div>
 
@@ -249,8 +249,5 @@
 <script src="{% static 'js/project.min.js' %}"></script>
 
 {% endblock javascript %}
-
-
 </body>
 </html>
-
