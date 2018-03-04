@@ -6884,13 +6884,21 @@ html, body {
     padding: 10px;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr; }
-    @media (min-width: 576px) {
+    @media (min-width: 768px) {
       .css-grid--card .row {
-        -ms-grid-columns: 1fr 1fr;
-            grid-template-columns: 1fr 1fr; } }
-  .css-grid--card .card {
-    height: 100%;
-    margin-bottom: 0; } }
+        -ms-grid-columns: 2fr 1fr;
+            grid-template-columns: 2fr 1fr; } }
+    @media (min-width: 992px) {
+      .css-grid--card .row {
+        -ms-grid-columns: 1fr 2fr 1fr 1fr;
+            grid-template-columns: 1fr 2fr 1fr 1fr; } }
+    @media (min-width: 1200px) {
+      .css-grid--card .row {
+        -ms-grid-columns: 2fr 2fr 1fr 2fr;
+            grid-template-columns: 2fr 2fr 1fr 2fr; } }
+    .css-grid--card .row .card {
+      height: auto;
+      margin-bottom: 0; } }
 
 .card {
   background: #efefef;
@@ -6916,6 +6924,10 @@ html, body {
 .meet-arcadia h1 {
   text-align: left; }
 
+.newsletter {
+  padding: 40px;
+  padding: 2.5rem; }
+
 .footer-main {
   background-color: #3C3F50;
   color: white;
@@ -6930,7 +6942,7 @@ html, body {
     margin-top: 32px;
     margin-top: 2rem; }
   .footer-main .footer-newsletter {
-    line-height: 1.6 !important; }
+    line-height: 1.6; }
   .footer-main .copyright {
     text-align: center;
     margin-top: 32px;
