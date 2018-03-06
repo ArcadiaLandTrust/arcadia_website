@@ -6867,9 +6867,9 @@ html, body {
     .css-grid-container:before {
       display: none; }
     .css-grid-container div[class^="col-"] {
+      max-width: 100% !important;
       width: 100% !important;
-      padding: 0;
-      max-width: 100% !important; }
+      padding: 0; }
     .css-grid-container .row {
       display: -ms-grid;
       display: grid;
@@ -6879,32 +6879,51 @@ html, body {
 
 @supports ((display: -ms-grid) or (display: grid)) {
   .css-grid--card .row {
-    grid-column-gap: 10px;
+    grid-column-gap: 5px;
     grid-row-gap: 10px;
     padding: 10px;
     -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr; }
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    grid-template-areas: "meet-arcadia" "explore" "support"; }
     @media (min-width: 768px) {
       .css-grid--card .row {
         -ms-grid-columns: 2fr 1fr;
-            grid-template-columns: 2fr 1fr; } }
+            grid-template-columns: 2fr 1fr;
+        grid-template-areas: "meet-arcadia explore" "meet-arcadia support"; } }
     @media (min-width: 992px) {
       .css-grid--card .row {
-        -ms-grid-columns: 1fr 2fr 1fr 1fr;
-            grid-template-columns: 1fr 2fr 1fr 1fr; } }
+        -ms-grid-columns: .3fr 2fr 1fr .3fr;
+            grid-template-columns: .3fr 2fr 1fr .3fr;
+        grid-template-areas: ".... meet-arcadia explore ...." ".... meet-arcadia support ...."; } }
     @media (min-width: 1200px) {
       .css-grid--card .row {
-        -ms-grid-columns: 2fr 2fr 1fr 2fr;
-            grid-template-columns: 2fr 2fr 1fr 2fr; } }
+        -ms-grid-columns: .4fr 2fr 1fr .4fr;
+            grid-template-columns: .4fr 2fr 1fr .4fr;
+        grid-template-areas: ".... meet-arcadia explore ...." ".... meet-arcadia support ...."; } }
     .css-grid--card .row .card {
-      height: auto;
+      height: 100%;
       margin-bottom: 0; } }
 
+.meet-arcadia {
+  grid-area: meet-arcadia; }
+
+.newsletter {
+  grid-area: newsletter; }
+
+.explore {
+  grid-area: explore; }
+
+.support {
+  grid-area: support; }
+
 .card {
-  background: #efefef;
-  border-radius: 19px / 6px;
-  box-shadow: 1px 2px 3px 1px #111;
-  margin-bottom: 20px; }
+  background: none;
+  border: none;
+  margin-bottom: 20px;
+  padding: 40px;
+  padding: 2.5rem; }
   @media (min-width: 992px) {
     .card {
       height: 100px; } }
@@ -6918,15 +6937,10 @@ html, body {
     font-size: 40px;
     font-size: 2.5rem;
     text-align: left;
-    margin: 8px 0;
-    margin: .5rem 0; }
-
-.meet-arcadia h1 {
-  text-align: left; }
-
-.newsletter {
-  padding: 40px;
-  padding: 2.5rem; }
+    font-family: Quando !important;
+    margin: 0; }
+  .card dt {
+    color: #2f2e2d; }
 
 .footer-main {
   background-color: #3C3F50;

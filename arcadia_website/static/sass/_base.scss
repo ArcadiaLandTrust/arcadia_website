@@ -106,9 +106,7 @@ html, body {
 /////////////////////////////////
 
 
-//remove bootstrap styles that are incompatible with css-grid at container level
-// see https://open.nytimes.com/bootstrap-to-css-grid-87b3f5f830e4
-
+//bootstrap style tweaks
 .css-grid-container {
 	@supports(display: grid) {
 		width: 100%;
@@ -118,12 +116,14 @@ html, body {
 		}
 
 		div[class^="col-"] {
+			max-width: 100% !important;
 			width: 100% !important;
 			padding: 0;
-			max-width: 100% !important;
+			//
 		}
 
 		.row {
+		  // make the row our grid wrapper
 			display: grid;
 			margin: 0;
 			&:before {
@@ -134,45 +134,88 @@ html, body {
 }
 
 
-// make changes to .row and .card at container level
+// the row is the wrapper and the card is inside the row
 
 .css-grid--card {
 	@supports(display: grid) {
-
+    // the row is our grid wrapper
 		.row {
-			grid-column-gap: 10px;
+			grid-column-gap: 5px;
 			grid-row-gap: 10px;
 			padding: 10px;
-			// mobile first!
-			grid-template-columns: 1fr;
 
+			// mobile first default
+			grid-template-columns: 1fr;
+			grid-template-rows: auto;
+			grid-template-areas:
+			      "meet-arcadia"
+			      "explore"
+			      "support";
+
+      // md = 768px+
 			@include media-breakpoint-up(md) {
         grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "meet-arcadia explore"
+            "meet-arcadia support";
         }
 
+      // lg = 992px+
       @include media-breakpoint-up(lg) {
-        grid-template-columns: 1fr 2fr 1fr 1fr;
+        grid-template-columns: .3fr 2fr 1fr .3fr;
+        grid-template-areas:
+            ".... meet-arcadia explore ...."
+            ".... meet-arcadia support ....";
         }
 
+      // xl = 1200px+
       @include media-breakpoint-up(xl) {
-        grid-template-columns: 2fr 2fr 1fr 2fr;
+        grid-template-columns: .4fr 2fr 1fr .4fr;
+        grid-template-areas:
+            ".... meet-arcadia explore ...."
+            ".... meet-arcadia support ....";
         }
 
 			.card {
 				//only if you want your cards to stretch to 100% height of the grid container - otherwise reset to auto;
-				height: auto;
+				height: 100%;
 				margin-bottom: 0;
 			}
     }
   }
 }
 
+/////////////////////////////////
+// Homepage main content card grid area definitions
+/////////////////////////////////
 
+.meet-arcadia {
+  grid-area: meet-arcadia;
+}
+
+.newsletter {
+  grid-area: newsletter;
+}
+
+
+.explore {
+  grid-area: explore;
+}
+
+
+.support {
+  grid-area: support;
+}
+
+
+// style the basic card component, applies with or without bootstrap
 .card {
-	background: #efefef;
-	border-radius: 19px / 6px;
-	box-shadow: 1px 2px 3px 1px #111;
+	background: none;
+	border: none;
+	//border-radius: 19px / 6px;
+	//box-shadow: 1px 2px 3px 1px #111;
 	margin-bottom: 20px;
+	padding: 2.5rem;
 	@media(min-width: 992px) {
 		height: 100px;
 		}
@@ -190,7 +233,12 @@ html, body {
 	h1 {
 		font-size: 2.5rem;
 		text-align: left;
-		margin: .5rem 0;
+		font-family: Quando !important;
+		margin: 0;
+	}
+
+	dt {
+	  color: $arc-brown;
 	}
 }
 
@@ -198,34 +246,12 @@ html, body {
 // Homepage main content card styling
 /////////////////////////////////
 
-.meet-arcadia {
-  h1 {
-    text-align: left;
-  }
-
-}
-
-
-.newsletter {
-  padding: 2.5rem;
-}
-
-
-.explore-projects {
-
-}
-
-
-.support-arcadia {
-
-}
 
 
 
 
-/////////////////////////////////
-// Homepage main content card grid area definitions
-/////////////////////////////////
+
+
 
 
 

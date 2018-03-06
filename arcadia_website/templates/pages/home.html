@@ -11,64 +11,71 @@
 
 
   <div class="container-fluid css-grid-container css-grid--card">
-
+      <!--the row class doubles as your css-grid wrapper-->
       <div class="row">
-
+          <!--The column is for bootstrap, meet-arcadia points to the grid-area name we use to -->
           <div class="col-md-6 col-lg-5 meet-arcadia">
-              <div class="card meet-arcadia">
-                  <h1>Meet Arcadia</h1>
+              <div class="card">
+                  <h2>Meet Arcadia</h2>
+                  <p>Arcadia is a non-profit land trust devoted to knitting together Middle Tennessee through creative land sharing, farming, and care networks.</p>
 
-                  <div class="">
-                      <dl class="">
-                        <dt class=""><i class="fas fa-handshake fa-5x"></i></dt>
-                          <dd>For Landowners</dd>
+                    <dl class="">
 
-                        <dt><i class="fas fa-images fa-5x"></i></dt>
-                          <dd>For Land Seekers</dd>
+                        <dt class="">
+                          <i class="fab fa-slideshare fa-5x" style="border-radius: 50px;"></i></i>
+                          <h4>Cooperation facilitation!</h4>
+                        </dt>
+                          <dd>We foster cooperative land use by facilitating land sharing agreements.</dd>
 
-                        <dt><i class="fab fa-envira fa-5x"></i></dt>
-                          <dd>For Farmers and Stewards</dd>
+                        <dt>
+                          <i class="fas fa-images fa-5x"></i>
+                          <h4>Project Design & Planning</h4>
+                        </dt>
+                          <dd>We develop and coordinate community-focused, community-led land design, emphasizing cutting-edge agroecology projects.</dd>
 
-                        <dt><i class="fab fa-connectdevelop fa-5x"></i></dt>
-                          <dd>For Community Partners</dd>
-                      </dl>
-                  </div>
+                        <dt>
+                          <i class="fab fa-connectdevelop fa-5x"></i>
+                          <h4>Community Partners</h4>
+                        </dt>
+                          <dd>We strengthen Middle Tennessee's economy by linking local community organizations, businesses, and non-profits with projects to help land and people serve each other.</dd>
+
+                        <dt>
+                          <i class="fas fa-tree fa-5x"></i>
+                          <h4>Secure Land</h4>
+                        </dt>
+                          <dd>First and foremost, we hold land in trust, guaranteeing it will be used only for community & ecological benefit forever.</dd>
+
+                    </dl>
+
+                <a href="{% url 'about' %}"class="btn btn-secondary btn-lg mx-auto">Learn more about Arcadia</a>
+
               </div>
           </div>
 
-          <div class="col-md-6 col-lg-3">
-              <div class="card newsletter">
+          <div class="col-md-6 col-lg-3 explore">
+              <div class="card">
                 <h1>Explore ongoing projects</h1>
                 <p> Learn the details of our ongoing projects, how you can get involved, and the steps for launching a new project with Arcadia.</p>
                 <button class="btn btn-primary btn-lg mx-auto">Explore projects</button>
 
               </div>
           </div>
+
+          <div class="col-md-6 col-lg-3 support">
+              <div class="card">
+                <h1>Support Arcadia</h1>
+                <p> <i class="far fa-heart fa-10x"></i></p>
+
               </div>
           </div>
+
       </div>
+
   </div>
 
 
 
 
-
-
-
-
-    <!--<div class="section meet-arcadia">-->
-      <!--<div class="image-container">-->
-                      <!--<img src="{% static 'images/arcadia_flower.png' %}"-->
-                           <!--alt="My cats cuddled up in a blanket"/>-->
-      <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="section newsletter">-->
-      <!--Stay in the loop-->
-    <!--</div>-->
-
-    <!--<div class="section news">-->
-    <!--</div>-->
 
 <!--End CSS grid experiment-->
 
