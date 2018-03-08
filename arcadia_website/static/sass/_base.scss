@@ -1,8 +1,13 @@
 // project specific CSS goes here
 
+
+
+
 ////////////////////////////////
-		//Project Variables//
+//Project Variables
 ////////////////////////////////
+
+
 
 
 
@@ -10,6 +15,7 @@
 // Fonts
 /////////////////////////////////
 $arc-header: Quando;
+
 
 
 
@@ -44,6 +50,7 @@ a.dropdown-item:hover {
 
 
 
+
 ////////////////////////////////
 // Body
 ////////////////////////////////
@@ -60,6 +67,7 @@ html, body {
   height: 100%;
   width: 100%;
 }
+
 
 
 
@@ -101,6 +109,9 @@ html, body {
   font-size: .9rem;
 }
 
+
+
+
 /////////////////////////////////
 //CSS-Grid Components
 /////////////////////////////////
@@ -134,7 +145,8 @@ html, body {
 }
 
 
-// the row is the wrapper and the card is inside the row
+// the row is the css grid wrapper, the col is inside the row, and takes the css grid coordinates or areas
+// card is in the col and takes the content styling
 
 .css-grid--card {
 	@supports(display: grid) {
@@ -184,6 +196,9 @@ html, body {
     }
   }
 }
+
+
+
 
 /////////////////////////////////
 // Homepage main content card grid area definitions
@@ -241,6 +256,9 @@ html, body {
 	  color: $arc-brown;
 	}
 }
+
+
+
 
 /////////////////////////////////
 // Homepage main content card styling
