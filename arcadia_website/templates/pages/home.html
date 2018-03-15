@@ -10,55 +10,60 @@
   </div>
 
 
-  <div class="container-fluid css-grid-container css-grid--card">
+  <div class="container-fluid css-grid-container css-grid--card homepage-content">
       <!--the row class doubles as your css-grid wrapper-->
       <div class="row">
           <!--The column is for bootstrap, meet-arcadia points to the grid-area name we use to -->
-          <div class="col-md-6 col-lg-5 meet-arcadia">
+          <div class="col-12 col-sm-11 col-md-10 col-lg-8 mx-auto meet-arcadia">
               <div class="card">
-                <div class="section">
 
                   <h3 class="meet-title">Meet Arcadia</h3>
-                  <p>Arcadia land trust promotes community health in Middle Tennessee. We foster projects focused primarily on creative land use, cutting-edge sustainable farming, and land stewardship. We focus on reducing the substantial barriers to these activities so people can have secure and stable access to land doing exciting projects that matter to all of us. </p>
+                  <p>Arcadia land trust promotes community health in Middle Tennessee. We foster projects focused primarily on creative land use, cutting-edge sustainable farming, and land stewardship. We focus on reducing the substantial barriers to these activities so people can have secure and stable access to land doing exciting projects that matter to all of us, for the long term. </p>
 
-                    <ul class="list-features fa-ul">
+                    <dl class="list-features">
 
-                        <li class="meet-item">
-                          <i class="fab fa-slideshare fa-5x fa-li meet-icon"></i>
+                        <dt class="feature meet-item">
+                          <i class="fab fa-slideshare fa-5x meet-icon"></i>
                           <h4>Cooperation facilitation!</h4>
-                          <p>We foster cooperative land use through creative, secure land sharing agreements.</p>
-                        </li>
+                        </dt>
+                        <dd><p>We foster cooperative land use through creative, secure land sharing agreements.</p></dd>
 
-
-                        <li>
-                          <i class="fas fa-images fa-5x fa-li meet-icon"></i>
+                        <dt>
+                          <i class="fas fa-images fa-5x meet-icon"></i>
                           <h4>Project Design & Planning</h4>
+                        </dt>
+                        <dd>
                           <p>We develop and coordinate community-focused, community-led land projects, emphasizing cutting-edge agroecology practices.</p>
-                        </li>
+                        </dd>
 
 
-                        <li>
-                          <i class="fab fa-connectdevelop fa-5x fa-li meet-icon"></i>
+                        <dt>
+                          <i class="fab fa-connectdevelop fa-5x meet-icon"></i>
                           <h4>Community Partners</h4>
+                        </dt>
+
+                        <dd>
                           <p>We strengthen Middle Tennessee by linking community organizations, local businesses, and non-profits with viable land projects to enhance community interconnectivity.</p>
-                        </li>
+                        </dd>
 
 
-                        <li>
-                          <i class="fas fa-tree fa-5x fa-li meet-icon"></i>
+                        <dt>
+                          <i class="fas fa-tree fa-5x meet-icon"></i>
                           <h4>Secure Land</h4>
+                        </dt>
+
+                        <dd>
                           <p>First and foremost, we hold land in trust, guaranteeing it will be used only for community & ecological benefit forever.</p>
-                        </li>
+                        </dd>
 
 
-                    </ul>
+                    </dl>
 
                 <a href="{% url 'about' %}"class="btn btn-secondary btn-lg mx-auto">Learn more about Arcadia</a>
-                </div>
               </div>
           </div>
 
-          <div class="col-md-6 col-lg-3 explore">
+          <div class="col-12 col-sm-11 col-md-10 col-lg-8 mx-auto explore">
               <div class="card">
                 <h1>Explore ongoing projects</h1>
                 <p> Learn the details of our ongoing projects, how you can get involved, and the steps for launching a new project with Arcadia.</p>
@@ -67,7 +72,7 @@
               </div>
           </div>
 
-          <div class="col-md-6 col-lg-3 support">
+          <div class="col-12 col-sm-11 col-md-10 col-lg-8 mx-auto support">
               <div class="card">
                 <h1>Support Arcadia</h1>
                 <p> <i class="far fa-heart fa-10x"></i></p>

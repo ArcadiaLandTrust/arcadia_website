@@ -63,14 +63,6 @@ html, body {
 }
 
 
-.main-container {
-  height: 100%;
-  width: 100%;
-}
-
-
-
-
 /////////////////////////////////
 //Banner
 /////////////////////////////////
@@ -116,11 +108,11 @@ html, body {
 
 
 /////////////////////////////////
-//CSS-Grid Components
+//CSS-Grid
 /////////////////////////////////
 
 
-//bootstrap style tweaks
+//important bootstrap style tweaks
 .css-grid-container {
 	@supports(display: grid) {
 		width: 100%;
@@ -148,8 +140,11 @@ html, body {
 }
 
 
-// the row is the css grid wrapper, the col is inside the row, and takes the css grid coordinates or areas
-// card is in the col and takes the content styling
+// div.row is the css grid wrapper, div.col-* is inside the row (just like vanilla bootstrap),
+// and takes the css grid coordinates or areas.
+// div.card is nested in a div.col-* and takes the content styling.
+// Nesting the div.card inside div.col-* ensures bootstrap will work if grid is not supported.
+
 
 .css-grid--card {
 	@supports(display: grid) {
@@ -204,12 +199,13 @@ html, body {
 
 
 /////////////////////////////////
-// Homepage main content card grid area definitions
+// Homepage grid area definitions
 /////////////////////////////////
 
 .meet-arcadia {
   grid-area: meet-arcadia;
 }
+
 
 .newsletter {
   grid-area: newsletter;
@@ -226,12 +222,14 @@ html, body {
 }
 
 
-// style the basic card component, applies with or without bootstrap
+
+/////////////////////////////////
+// General card component styling. (applies to both css-grid and bootstrap layouts)
+/////////////////////////////////
+
 .card {
 	background: none;
 	border: 1px solid;
-	//border-radius: 19px / 6px;
-	//box-shadow: 1px 2px 3px 1px #111;
 	margin-bottom: 20px;
 	padding: 2.5rem;
 	@media(min-width: 992px) {
@@ -255,15 +253,9 @@ html, body {
 		margin: 0;
 	}
 
-	.meet-title {
-	  color: $arc-brown;
-	  font-family: Quando;
-	  padding-bottom: 2rem;
-	}
-
 	p {
-	padding-bottom: 3rem;
-	font-size: 1.3rem;
+	  padding-bottom: 3rem;
+	  font-size: 1.3rem;
 	}
 }
 
@@ -276,15 +268,24 @@ html, body {
 // Homepage main content card styling
 /////////////////////////////////
 
+.homepage-content{
+
+  .list-features {
 
 
-.list-features {
-  box-sizing: content-box;
-  left: 100px;
 
-  li p {
-    padding-left: 3rem;}
+
+
+
+
+
+
 }
+
+
+}
+
+
 
 
 
@@ -324,6 +325,10 @@ html, body {
   }
   .btn {
     margin-top: 1rem;
+  }
+  h6{
+    padding-top: .55rem;
+    border-top: 1px solid $arc-blue-shadow;
   }
 }
 

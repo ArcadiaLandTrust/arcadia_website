@@ -6822,10 +6822,6 @@ html, body {
   width: 100%;
   margin: 0; }
 
-.main-container {
-  height: 100%;
-  width: 100%; }
-
 .banner-container {
   height: 384px;
   height: 24rem;
@@ -6942,23 +6938,11 @@ html, body {
     text-align: left;
     font-family: Quando !important;
     margin: 0; }
-  .card .meet-title {
-    color: #2f2e2d;
-    font-family: Quando;
-    padding-bottom: 32px;
-    padding-bottom: 2rem; }
   .card p {
     padding-bottom: 48px;
     padding-bottom: 3rem;
     font-size: 20.8px;
     font-size: 1.3rem; }
-
-.list-features {
-  box-sizing: content-box;
-  left: 100px; }
-  .list-features li p {
-    padding-left: 48px;
-    padding-left: 3rem; }
 
 .footer-main {
   background-color: #3C3F50;
@@ -6984,6 +6968,10 @@ html, body {
   .footer-main .btn {
     margin-top: 16px;
     margin-top: 1rem; }
+  .footer-main h6 {
+    padding-top: 8.8px;
+    padding-top: .55rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.3); }
 
 .alert-debug {
   background-color: #fff;
