@@ -5,19 +5,19 @@
 // When optimizing your site for production, comment out import of all bootstrap components not being used
 // This reduces the compiled CSS size meaning faster load times.
 
-/////Project component partials
+///// Project component partials
 // Import your project base & component partials
 //
 @import "colors";
 @import "typography";
 
 
-////////////Custom Bootstrap Variables
+/////////////////// Custom Bootstrap Variables
 // import custom bootstrap variable overrides first, so they take precedence
 @import "custom_bootstrap_vars";
 
 
-///////////////////Bootstrap Components
+/////////////////// Bootstrap Components
 //
 // Import the bootstrap components individually here, if you wish.
 // Alternatively, simply "@import bootstrap" to get everything
