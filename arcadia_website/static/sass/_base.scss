@@ -24,6 +24,59 @@ $arc-serif-stack:
 
 
 
+/////////////////////////////////
+// General component styling. (applies to both css-grid and bootstrap layouts)
+/////////////////////////////////
+
+.card {
+	background: none;
+	border: 1 px solid;
+	border: none;
+	margin-bottom: 200px;
+	padding: 0;
+	display: block;
+	//@media(min-width: 992px) {
+  //  height: 100px;
+	//	}
+
+	.image-container {
+		overflow: hidden;
+		margin-bottom: 7px;
+	}
+
+	img {
+		max-width: 100%;
+		border-radius: 3px;
+	}
+
+	h2 {
+		//font-size: 2.5rem;
+		text-align: left;
+		margin: 0px 0px 30px;
+	}
+
+	p {
+	  margin-bottom: 0;
+	  font-family: $arc-serif-stack;
+	  font-size: 1.2rem;
+	  line-height: 1.8rem;
+	  width: 100%;
+	}
+}
+
+
+.arc-btn {
+  margin: 2rem auto 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 250px;
+  text-align: center;
+  vertical-align: middle;
+  display: block;
+  padding: 1.3rem 0;
+}
+
+
 
 //////////////////////////////////
 // Navbar
@@ -75,40 +128,151 @@ html, body {
 
 
 .banner-container {
-  height: 24rem;
-  margin-top: 2.5%;
-  margin-bottom: 1rem;
+  //height: 24rem;
+  margin-top: 0;
   //border: 4px solid pink !important;
   border-bottom: 1px solid $gray;
-  padding: 10px;
-  padding-bottom: 2rem;
-}
+  padding: 4rem 10px 5rem 10px;
 
-.banner-header {
+   .banner-header {
   font-family: $arc-header;
   color: $arc-blue;
-}
+  }
 
-.banner-logo {
-  margin-top: 1rem;
-  padding: 0;
-  height: 80%;
-  max-height: 11rem;
-}
-
-.banner-sub-header {
+  .banner-sub-header {
   font-variant: small-caps;
   letter-spacing: .4rem;
   margin-bottom: 0;
   padding-bottom: 0;
+  }
+
+  .banner-logo {
+    margin-top: 1rem;
+    padding: 0;
+    height: 80%;
+    //max-height: 11rem;
+    max-height: 20rem;
+  }
+
+  .banner-tagline {
+    font-style: italic;
+    padding-top: 1.5rem;
+    font-size: .9rem;
+  }
 }
 
-.banner-tagline {
-  font-style: italic;
-  padding-top: 1.5rem;
-  font-size: .9rem;
+
+
+/////////////////////////////////
+// Homepage main content
+/////////////////////////////////
+
+.homepage-content{
+  .meet-arcadia {
+  }
+
+  .main-content {
+    padding-bottom: 40px;
+  }
+
+  .meet-header {
+    margin: 2.5rem 0 3.5rem 0;
+
+    p {
+      line-height: 1.8rem;
+      width: 97%;
+    }
+
+  }
+
+  .meet-title {
+    margin-bottom: 2rem;
+
+  }
+
+  .list-features {
+    //margin: 1rem 0 .8rem;
+    margin: 0 0 0 0;
+    padding: 0;
+    }
+
+  dl {
+
+    dt {
+      border-top: 1px solid $arc-list-divider;
+      padding: 1.5rem 0 0 5rem;
+      font-size: 1.5rem;
+      font-weight: 400;
+
+      i {
+        left: .5rem;
+        padding-top: .1rem;
+        padding-right: 0rem;
+        position: absolute;
+        text-align: center;
+        font-size: 25px;
+        background: $arc-purple;
+        color: $arc-blue-light;
+        border-radius: 25px;
+        border: 4px solid $arc-blue-light;
+        width: 3rem;
+        height: 3rem;
+        line-height: 2.2rem;
+        }
+      }
+
+    dd {
+      box-sizing: content-box;
+      padding: 1.5rem 0 1rem;
+    }
+
+  }
 
 }
+
+
+/////////////////////////////////
+// Footer
+/////////////////////////////////
+
+
+.footer-main {
+  background-color: $arc-blue;
+  color: white;
+  font-size: 0.8rem;
+  padding: 0 0 0 0;
+  margin: 0;
+  .top-row {
+    padding: 0px 0px !important;
+    margin: 0px 0px !important;
+   }
+  div[class^="col-"] {
+    margin-top: 2rem;
+  }
+  p {
+  }
+  .footer-newsletter {
+    line-height: 1.6;
+  }
+  .copyright {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: .3rem;
+  }
+  .btn {
+    margin-top: 1rem;
+  }
+  h6{
+    padding-top: .55rem;
+    //border-top: 1px solid $arc-blue-shadow;
+  }
+}
+
+
+
+
+
+
 
 
 
@@ -227,167 +391,6 @@ html, body {
   grid-area: support;
 }
 
-
-
-/////////////////////////////////
-// General component styling. (applies to both css-grid and bootstrap layouts)
-/////////////////////////////////
-
-.card {
-	background: none;
-	border: 1 px solid;
-	border: none;
-	margin-bottom: 200px;
-	padding: 0;
-	display: block;
-	//@media(min-width: 992px) {
-  //  height: 100px;
-	//	}
-
-	.image-container {
-		overflow: hidden;
-		margin-bottom: 7px;
-	}
-
-	img {
-		max-width: 100%;
-		border-radius: 3px;
-	}
-
-	h2 {
-		//font-size: 2.5rem;
-		text-align: left;
-		margin: 0px 0px 30px;
-	}
-
-	p {
-	  padding: 0;
-	  padding-right: 50px;
-	  margin-bottom: 0;
-	  font-family: $arc-serif-stack;
-	  font-size: 1.2rem;
-	  line-height: 1.8rem;
-	}
-}
-
-.main-content {
-  padding-bottom: 40px;
-}
-
-.arc-btn {
-  margin: 2rem auto 0;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 250px;
-  text-align: center;
-  vertical-align: middle;
-  display: block;
-  padding: 1.3rem 0;
-}
-
-
-
-
-/////////////////////////////////
-// Homepage main content styling
-/////////////////////////////////
-
-.homepage-content{
-
-  .meet-title {
-    margin-bottom: 1rem;
-
-  }
-
-
-  .list-features {
-    //margin: 1rem 0 .8rem;
-    margin: 0 0 0 0;
-    padding: 0;
-    }
-
-  dl {
-
-    dt {
-      border-top: 1px solid $arc-list-divider;
-      padding: 1.5rem 0 0 5rem;
-      font-size: 1.5rem;
-      font-weight: 400;
-
-      i {
-        left: .5rem;
-        padding-top: .1rem;
-        padding-right: 0rem;
-        position: absolute;
-        text-align: center;
-        font-size: 25px;
-        background: $arc-purple;
-        color: $arc-blue-light;
-        border-radius: 25px;
-        border: 4px solid $arc-blue-light;
-        width: 3rem;
-        height: 3rem;
-        line-height: 2.2rem;
-        }
-      }
-
-    dd {
-      box-sizing: content-box;
-      padding: 1.5rem 0 1.4rem;
-    }
-
-  }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/////////////////////////////////
-// footer
-/////////////////////////////////
-
-
-.footer-main {
-  background-color: $arc-blue;
-  color: white;
-  font-size: 0.8rem;
-  padding: 0 0 0 0;
-  margin: 0;
-  .top-row {
-    padding: 0px 0px !important;
-    margin: 0px 0px !important;
-   }
-  div[class^="col-"] {
-    margin-top: 2rem;
-  }
-  p {
-  }
-  .footer-newsletter {
-    line-height: 1.6;
-  }
-  .copyright {
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: .3rem;
-  }
-  .btn {
-    margin-top: 1rem;
-  }
-  h6{
-    padding-top: .55rem;
-    //border-top: 1px solid $arc-blue-shadow;
-  }
-}
 
 ////////////////////////////////
 		//Alerts//
