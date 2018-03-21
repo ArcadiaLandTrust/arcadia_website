@@ -2,6 +2,8 @@
 {% load static i18n compress %}
 {% block content %}
 
+<!--TODO: bigger font for paragraphs on meet arcadia section-->
+
   <div class="container-fluid banner-container text-center">
     <h1 class="banner-header my-auto">Arcadia</h1>
     <h6 class="banner-header banner-sub-header my-auto">a community land trust</h6>
@@ -15,27 +17,34 @@
       <div class="row" role="main">
           <!--The column is for bootstrap, meet-arcadia points to the grid-area name we use to -->
           <div class="col-12 col-sm-11 col-md-10 col-lg-8 mx-auto meet-arcadia">
-              <div class="card" role="section">
+              <div class="card main-content" role="section">
 
-                  <h2 class="meet-title font-family-sans-serif">Meet Arcadia</h2>
-                  <p>Arcadia land trust promotes community health in Middle Tennessee. We foster projects focused primarily on creative land use, cutting-edge sustainable farming, and land stewardship. We focus on reducing the substantial barriers to these activities so people can have secure and stable access to land doing exciting projects that matter to all of us, for the long term. </p>
+                <div class="meet-header">
+                  <h3 class="meet-title font-family-sans-serif">Meet Arcadia</h3>
+                  <p>Arcadia promotes community health in Middle Tennessee.
+                    We support projects focused on creative land use, cutting-edge perennial farming, and ecological land stewardship.</p>
+
+                    <p>Our mission is to reduce the substantial barriers to these activities. We envision a future in which anyone
+                    can obtain secure access to land doing exciting projects that matter to all of us,
+                    for the long term. </p>
+                </div>
 
                     <dl class="list-features">
 
 
-                        <dt class="feature meet-item">
-                          <i class="fab fa-slideshare fa-5x meet-icon"></i>
-                          <h4>Cooperation facilitation!</h4>
+                        <dt>
+                          <i class="fab fa-slideshare"></i>
+                          Fosters Cooperation.
                         </dt>
 
                         <dd>
-                          <p>We foster cooperative land use through creative, secure land sharing agreements.</p>
+                          <p>Arcadia facilitates cooperative land use through creative & secure land sharing agreements.</p>
                         </dd>
 
 
                         <dt>
-                          <i class="fas fa-images fa-5x meet-icon"></i>
-                          <h4>Project Design & Planning</h4>
+                          <i class="fas fa-images"></i>
+                          Designs & plans.
                         </dt>
 
                         <dd>
@@ -44,8 +53,8 @@
 
 
                         <dt>
-                          <i class="fab fa-connectdevelop fa-5x meet-icon"></i>
-                          <h4>Community Partners</h4>
+                          <i class="fab fa-connectdevelop"></i>
+                          Connects partners to stewards.
                         </dt>
 
                         <dd>
@@ -54,18 +63,19 @@
 
 
                         <dt>
-                          <i class="fas fa-tree fa-5x meet-icon"></i>
-                          <h4>Secure Land</h4>
+                          <i class="fas fa-tree"></i>
+                          Secures land.
                         </dt>
 
                         <dd>
-                          <p>First and foremost, we hold land in trust, guaranteeing it will be used only for community & ecological benefit forever.</p>
+                          <p>First and foremost, Arcadia holds land in trust, guaranteeing it will be used only for community & ecological benefit forever.</p>
                         </dd>
 
 
                     </dl>
 
-                <a href="{% url 'about' %}"class="btn btn-secondary btn-lg mx-auto">Learn more about Arcadia</a>
+                <a href="{% url 'about' %}" class="btn btn-outline-primary btn-lg arc-btn">Learn more about Arcadia</a>
+
               </div>
           </div>
 

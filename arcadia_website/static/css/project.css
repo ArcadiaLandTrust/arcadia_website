@@ -6878,13 +6878,11 @@ html, body {
 
 @supports ((display: -ms-grid) or (display: grid)) {
   .css-grid--card .row {
-    grid-column-gap: 5px;
-    grid-row-gap: 10px;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
     padding: 10px;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
     grid-template-areas: "meet-arcadia" "explore" "support"; }
     @media (min-width: 768px) {
       .css-grid--card .row {
@@ -6893,13 +6891,13 @@ html, body {
         grid-template-areas: "meet-arcadia explore" "meet-arcadia support"; } }
     @media (min-width: 992px) {
       .css-grid--card .row {
-        -ms-grid-columns: .3fr 2fr 1fr .3fr;
-            grid-template-columns: .3fr 2fr 1fr .3fr;
+        -ms-grid-columns: .2fr 2fr 1fr .2fr;
+            grid-template-columns: .2fr 2fr 1fr .2fr;
         grid-template-areas: ".... meet-arcadia explore ...." ".... meet-arcadia support ...."; } }
     @media (min-width: 1200px) {
       .css-grid--card .row {
-        -ms-grid-columns: .4fr 2fr 1fr .4fr;
-            grid-template-columns: .4fr 2fr 1fr .4fr;
+        -ms-grid-columns: .55fr 2fr 1fr .55fr;
+            grid-template-columns: .55fr 2fr 1fr .55fr;
         grid-template-areas: ".... meet-arcadia explore ...." ".... meet-arcadia support ...."; } }
     .css-grid--card .row .card {
       height: 100%;
@@ -6919,13 +6917,11 @@ html, body {
 
 .card {
   background: none;
-  border: 1px solid;
-  margin-bottom: 20px;
-  padding: 40px;
-  padding: 2.5rem; }
-  @media (min-width: 992px) {
-    .card {
-      height: 100px; } }
+  border: 1 px solid;
+  border: none;
+  margin-bottom: 200px;
+  padding: 0;
+  display: block; }
   .card .image-container {
     overflow: hidden;
     margin-bottom: 7px; }
@@ -6936,13 +6932,70 @@ html, body {
     text-align: left;
     margin: 0px 0px 30px; }
   .card p {
-    padding-bottom: 48px;
-    padding-bottom: 3rem;
-    font-size: 20px;
-    font-size: 1.25rem; }
+    padding: 0;
+    padding-right: 50px;
+    margin-bottom: 0;
+    font-family: Palatino, "Palatino Linotype", "Book Antiqua", "Hoefler Text", Georgia, "Lucida Bright", Cambria, Times, "Times New Roman", serif;
+    font-size: 19.2px;
+    font-size: 1.2rem;
+    line-height: 28.8px;
+    line-height: 1.8rem; }
+
+.main-content {
+  padding-bottom: 40px; }
+
+.arc-btn {
+  margin: 32px auto 0;
+  margin: 2rem auto 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 250px;
+  text-align: center;
+  vertical-align: middle;
+  display: block;
+  padding: 20.8px 0;
+  padding: 1.3rem 0; }
+
+.homepage-content .meet-title {
+  margin-bottom: 16px;
+  margin-bottom: 1rem; }
 
 .homepage-content .list-features {
-  margin: 50px 0 40px; }
+  margin: 0 0 0 0;
+  padding: 0; }
+
+.homepage-content dl dt {
+  border-top: 1px solid #CFE3DC;
+  padding: 24px 0 0 80px;
+  padding: 1.5rem 0 0 5rem;
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 400; }
+  .homepage-content dl dt i {
+    left: 8px;
+    left: .5rem;
+    padding-top: 1.6px;
+    padding-top: .1rem;
+    padding-right: 0px;
+    padding-right: 0rem;
+    position: absolute;
+    text-align: center;
+    font-size: 25px;
+    background: #a08bc5;
+    color: #bfcafa;
+    border-radius: 25px;
+    border: 4px solid #bfcafa;
+    width: 48px;
+    width: 3rem;
+    height: 48px;
+    height: 3rem;
+    line-height: 35.2px;
+    line-height: 2.2rem; }
+
+.homepage-content dl dd {
+  box-sizing: content-box;
+  padding: 24px 0 22.4px;
+  padding: 1.5rem 0 1.4rem; }
 
 .footer-main {
   background-color: #3C3F50;
@@ -6970,8 +7023,7 @@ html, body {
     margin-top: 1rem; }
   .footer-main h6 {
     padding-top: 8.8px;
-    padding-top: .55rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.3); }
+    padding-top: .55rem; }
 
 .alert-debug {
   background-color: #fff;

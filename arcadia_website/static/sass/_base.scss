@@ -7,14 +7,20 @@
 //Project Variables
 ////////////////////////////////
 
-
-
-
-
-/////////////////////////////////
-// Fonts
-/////////////////////////////////
+//// Fonts
 $arc-header: Quando;
+// borrowed from djangoproject.com
+$arc-serif-stack:
+  Palatino,
+  "Palatino Linotype",
+  "Book Antiqua",
+  "Hoefler Text",
+  Georgia,
+  "Lucida Bright",
+  Cambria,
+  Times,
+  "Times New Roman",
+  serif;
 
 
 
@@ -112,7 +118,7 @@ html, body {
 /////////////////////////////////
 
 
-//important bootstrap style tweaks
+//important bootstrap style tweaks for css grid
 .css-grid-container {
 	@supports(display: grid) {
 		width: 100%;
@@ -150,13 +156,13 @@ html, body {
 	@supports(display: grid) {
     // the row is our grid wrapper
 		.row {
-			grid-column-gap: 5px;
-			grid-row-gap: 10px;
+			grid-column-gap: 0;
+			grid-row-gap: 0;
 			padding: 10px;
 
 			// mobile first default
 			grid-template-columns: 1fr;
-			grid-template-rows: auto;
+			//grid-template-rows: auto;
 			grid-template-areas:
 			      "meet-arcadia"
 			      "explore"
@@ -172,7 +178,7 @@ html, body {
 
       // lg = 992px+
       @include media-breakpoint-up(lg) {
-        grid-template-columns: .3fr 2fr 1fr .3fr;
+        grid-template-columns: .2fr 2fr 1fr .2fr;
         grid-template-areas:
             ".... meet-arcadia explore ...."
             ".... meet-arcadia support ....";
@@ -180,7 +186,7 @@ html, body {
 
       // xl = 1200px+
       @include media-breakpoint-up(xl) {
-        grid-template-columns: .4fr 2fr 1fr .4fr;
+        grid-template-columns: .55fr 2fr 1fr .55fr;
         grid-template-areas:
             ".... meet-arcadia explore ...."
             ".... meet-arcadia support ....";
@@ -224,17 +230,19 @@ html, body {
 
 
 /////////////////////////////////
-// General card component styling. (applies to both css-grid and bootstrap layouts)
+// General component styling. (applies to both css-grid and bootstrap layouts)
 /////////////////////////////////
 
 .card {
 	background: none;
-	border: 1px solid;
-	margin-bottom: 20px;
-	padding: 2.5rem;
-	@media(min-width: 992px) {
-		height: 100px;
-		}
+	border: 1 px solid;
+	border: none;
+	margin-bottom: 200px;
+	padding: 0;
+	display: block;
+	//@media(min-width: 992px) {
+  //  height: 100px;
+	//	}
 
 	.image-container {
 		overflow: hidden;
@@ -253,27 +261,86 @@ html, body {
 	}
 
 	p {
-	  padding-bottom: 3rem;
-	  font-size: 1.25rem;
+	  padding: 0;
+	  padding-right: 50px;
+	  margin-bottom: 0;
+	  font-family: $arc-serif-stack;
+	  font-size: 1.2rem;
+	  line-height: 1.8rem;
 	}
+}
+
+.main-content {
+  padding-bottom: 40px;
+}
+
+.arc-btn {
+  margin: 2rem auto 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 250px;
+  text-align: center;
+  vertical-align: middle;
+  display: block;
+  padding: 1.3rem 0;
 }
 
 
 
 
-
-
 /////////////////////////////////
-// Homepage main content card styling
+// Homepage main content styling
 /////////////////////////////////
 
 .homepage-content{
 
+  .meet-title {
+    margin-bottom: 1rem;
+
+  }
+
+
   .list-features {
-    margin: 50px 0 40px;
+    //margin: 1rem 0 .8rem;
+    margin: 0 0 0 0;
+    padding: 0;
+    }
+
+  dl {
+
+    dt {
+      border-top: 1px solid $arc-list-divider;
+      padding: 1.5rem 0 0 5rem;
+      font-size: 1.5rem;
+      font-weight: 400;
+
+      i {
+        left: .5rem;
+        padding-top: .1rem;
+        padding-right: 0rem;
+        position: absolute;
+        text-align: center;
+        font-size: 25px;
+        background: $arc-purple;
+        color: $arc-blue-light;
+        border-radius: 25px;
+        border: 4px solid $arc-blue-light;
+        width: 3rem;
+        height: 3rem;
+        line-height: 2.2rem;
+        }
+      }
+
+    dd {
+      box-sizing: content-box;
+      padding: 1.5rem 0 1.4rem;
+    }
+
   }
 
 }
+
+
 
 
 
@@ -318,7 +385,7 @@ html, body {
   }
   h6{
     padding-top: .55rem;
-    border-top: 1px solid $arc-blue-shadow;
+    //border-top: 1px solid $arc-blue-shadow;
   }
 }
 
