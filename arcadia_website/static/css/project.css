@@ -6814,10 +6814,10 @@ a.text-dark:hover, a.text-dark:focus {
   .card p {
     margin-bottom: 0;
     font-family: Palatino, "Palatino Linotype", "Book Antiqua", "Hoefler Text", Georgia, "Lucida Bright", Cambria, Times, "Times New Roman", serif;
-    font-size: 19.2px;
-    font-size: 1.2rem;
-    line-height: 28.8px;
-    line-height: 1.8rem;
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 35.2px;
+    line-height: 2.2rem;
     width: 100%; }
 
 .arc-btn {
@@ -6891,12 +6891,17 @@ html, body {
   padding-bottom: 40px; }
 
 .homepage-content .meet-header {
-  margin: 40px 0 56px 0;
-  margin: 2.5rem 0 3.5rem 0; }
+  margin: 28px 0 48px 0;
+  margin: 1.75rem 0 3rem 0; }
+  .homepage-content .meet-header h3 {
+    font-size: 35.2px;
+    font-size: 2.2rem; }
   .homepage-content .meet-header p {
-    line-height: 28.8px;
-    line-height: 1.8rem;
-    width: 97%; }
+    line-height: 35.2px;
+    line-height: 2.2rem;
+    width: 97%;
+    margin-bottom: 12px;
+    margin-bottom: .75rem; }
 
 .homepage-content .meet-title {
   margin-bottom: 32px;
@@ -6908,36 +6913,38 @@ html, body {
 
 .homepage-content dl dt {
   border-top: 1px solid #CFE3DC;
-  padding: 24px 0 0 80px;
-  padding: 1.5rem 0 0 5rem;
-  font-size: 24px;
-  font-size: 1.5rem;
+  padding: 25.6px 0 0 16px;
+  padding: 1.6rem 0 0 1rem;
+  font-size: 25.6px;
+  font-size: 1.6rem;
   font-weight: 400; }
   .homepage-content dl dt i {
-    left: 8px;
-    left: .5rem;
-    padding-top: 1.6px;
-    padding-top: .1rem;
-    padding-right: 0px;
-    padding-right: 0rem;
-    position: absolute;
+    left: 0px;
+    left: 0rem;
+    margin-right: 16px;
+    margin-right: 1rem;
+    padding-top: 2px;
+    padding-top: .125rem;
+    padding-right: 1.328px;
+    padding-right: .083rem;
+    position: relative;
     text-align: center;
-    font-size: 25px;
+    font-size: 27px;
     background: #a08bc5;
     color: #bfcafa;
     border-radius: 25px;
     border: 4px solid #bfcafa;
-    width: 48px;
-    width: 3rem;
-    height: 48px;
-    height: 3rem;
-    line-height: 35.2px;
-    line-height: 2.2rem; }
+    width: 52.8px;
+    width: 3.3rem;
+    height: 52.8px;
+    height: 3.3rem;
+    line-height: 41.6px;
+    line-height: 2.6rem; }
 
 .homepage-content dl dd {
   box-sizing: content-box;
-  padding: 24px 0 16px;
-  padding: 1.5rem 0 1rem; }
+  padding: 20.8px 0 16px;
+  padding: 1.3rem 0 1rem; }
 
 .footer-main {
   background-color: #3C3F50;
