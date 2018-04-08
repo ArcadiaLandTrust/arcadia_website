@@ -5,7 +5,7 @@
 <!--TODO: bigger font for paragraphs on meet arcadia section-->
 
   <div class="container-fluid banner-container text-center">
-    <h1 class="banner-header my-auto">Arcadia</h1>
+    <h1 class="banner-header banner-title my-auto">Arcadia</h1>
     <h6 class="banner-header banner-sub-header my-auto">a community land trust</h6>
     <img src="{% static 'images/arcadia_flower.png' %}" class="banner-logo mx-auto">
     <h6 class="banner-header banner-tagline">Community-led land stewardship for Middle Tennessee</h6>
@@ -18,9 +18,8 @@
           <!--The column is for bootstrap, meet-arcadia points to the grid-area name we use to -->
           <div class="col-12 col-sm-11 col-md-10 col-lg-8 mx-auto meet-arcadia">
               <div class="card main-content" role="section">
-
                 <div class="meet-header">
-                  <h3 class="meet-title font-family-sans-serif">Meet Arcadia</h3>
+                  <h2 class="meet-title font-family-sans-serif">Meet Arcadia</h2>
                   <p>Arcadia promotes community health in Middle Tennessee.
                     We support projects focused on creative land sharing, cutting-edge perennial farming, and ecological land stewardship.</p>
 
@@ -34,7 +33,7 @@
 
                         <dt>
                           <i class="fab fa-slideshare"></i>
-                          Fosters cooperation
+                          Fosters cooperation.
                         </dt>
 
                         <dd>
@@ -44,7 +43,7 @@
 
                         <dt>
                           <i class="fas fa-images"></i>
-                          Designs & plans projects
+                          Designs & plans projects.
                         </dt>
 
                         <dd>
@@ -54,7 +53,7 @@
 
                         <dt>
                           <i class="fab fa-connectdevelop"></i>
-                          Connects partners
+                          Connects partners.
                         </dt>
 
                         <dd>
@@ -62,19 +61,19 @@
                         </dd>
 
 
-                        <dt>
-                          <i class="fas fa-tree"></i>
-                          Secure land
-                        </dt>
+                        <!--<dt>-->
+                          <!--<i class="fas fa-tree"></i>-->
+                          <!--Secures land.-->
+                        <!--</dt>-->
 
-                        <dd>
-                          <p>First and foremost, Arcadia holds land in trust, guaranteeing it will be used only for community & ecological benefit forever.</p>
-                        </dd>
+                        <!--<dd>-->
+                          <!--<p>First and foremost, Arcadia holds land in trust, guaranteeing it will be used only for community & ecological benefit forever.</p>-->
+                        <!--</dd>-->
 
 
                     </dl>
 
-                <a href="{% url 'about' %}" class="btn btn-outline-primary btn-lg arc-btn">Learn more about Arcadia</a>
+                <a href="{% url 'about' %}" class="btn btn-outline-secondary btn-lg arc-btn">Learn more about Arcadia</a>
 
               </div>
           </div>
@@ -83,7 +82,7 @@
               <div class="card">
                 <h2>Explore ongoing projects</h2>
                 <p> Learn the details of our ongoing projects, how you can get involved, and the steps for launching a new project with Arcadia.</p>
-                <button class="btn btn-primary btn-lg mx-auto">Explore projects</button>
+                <a href="{% url 'about' %}" class="btn btn-outline-primary btn-lg arc-btn" role="button">Explore Projects</a>
 
               </div>
           </div>
