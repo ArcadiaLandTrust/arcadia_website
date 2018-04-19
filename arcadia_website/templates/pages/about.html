@@ -1,1 +1,91 @@
 {% extends "base.html" %}
+{% load static i18n compress %}
+{% block content %}
+  <div class="container-fluid css-grid-container css-grid--card homepage-content">
+      <!--div.row is the css-grid wrapper-->
+      <div class="row" role="main">
+          <!--The column is for bootstrap, meet-arcadia points to the grid-area name we use to -->
+          <div class="col-12 col-sm-11 col-md-10 col-lg-8 mx-auto meet-arcadia">
+              <div class="card main-content" role="section">
+                <div class="meet-header">
+                  <h2 class="meet-title font-family-sans-serif">Meet Arcadia</h2>
+                  <p>Arcadia promotes community health in Middle Tennessee.
+                    We support projects focused on creative land sharing, cutting-edge perennial farming, and ecological land stewardship.</p>
+
+                    <p>Our mission is to reduce the substantial barriers to these activities. We envision a future in which anyone
+                    can obtain secure access to land doing exciting projects that matter to all of us,
+                    for the long term. </p>
+                </div>
+
+                    <dl class="list-features">
+
+
+                        <dt>
+                          <i class="fab fa-slideshare"></i>
+                          Fosters cooperation.
+                        </dt>
+
+                        <dd>
+                          <p>Arcadia enables cooperative land use with creative & secure land sharing agreements.</p>
+                        </dd>
+
+
+                        <dt>
+                          <i class="fas fa-images"></i>
+                          Designs & plans projects.
+                        </dt>
+
+                        <dd>
+                          <p>We design and coordinate community-focused, community-led land projects, emphasizing cutting-edge agroecology practices.</p>
+                        </dd>
+
+
+                        <dt>
+                          <i class="fab fa-connectdevelop"></i>
+                          Connects partners.
+                        </dt>
+
+                        <dd>
+                          <p>Arcadia links community organizations, local businesses, and non-profits with viable land projects to grow community resilience.</p>
+                        </dd>
+
+
+                        <!--<dt>-->
+                          <!--<i class="fas fa-tree"></i>-->
+                          <!--Secures land.-->
+                        <!--</dt>-->
+
+                        <!--<dd>-->
+                          <!--<p>First and foremost, Arcadia holds land in trust, guaranteeing it will be used only for community & ecological benefit forever.</p>-->
+                        <!--</dd>-->
+
+
+                    </dl>
+
+                <a href="{% url 'about' %}" class="btn btn-outline-secondary btn-lg arc-btn">Learn more about Arcadia</a>
+
+              </div>
+          </div>
+
+          <!--<div class="col-12 col-sm-11 col-md-10 col-lg-8 mx-auto explore">-->
+              <!--<div class="card">-->
+                <!--<h2>Explore ongoing projects</h2>-->
+                <!--<p> Learn the details of our ongoing projects, how you can get involved, and the steps for launching a new project with Arcadia.</p>-->
+                <!--<a href="{% url 'about' %}" class="btn btn-outline-primary btn-lg arc-btn" role="button">Explore Projects</a>-->
+
+              <!--</div>-->
+          <!--</div>-->
+
+          <!--<div class="col-12 col-sm-11 col-md-10 col-lg-8 mx-auto support">-->
+              <!--<div class="card">-->
+                <!--<h1>Support Arcadia</h1>-->
+                <!--<p> <i class="far fa-heart fa-10x"></i></p>-->
+
+              <!--</div>-->
+          <!--</div>-->
+
+      </div>
+
+  </div>
+
+{% endblock content %}
