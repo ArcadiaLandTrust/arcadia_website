@@ -74,6 +74,9 @@ $arc-serif-stack:
   padding: 1.2rem 0;
 }
 
+.btn-outline-primary {
+  color: $arc-dark-green;
+}
 
 
 //////////////////////////////////
@@ -170,6 +173,15 @@ html, body {
 /////////////////////////////////
 
 .homepage-content{
+
+  .gutter-left {
+
+  }
+
+  .gutter-right {
+    background-color: $arc-bg-darker;
+  }
+
   .meet-arcadia {
   }
 
@@ -301,8 +313,9 @@ html, body {
 		div[class^="col-"] {
 			max-width: 100% !important;
 			width: 100% !important;
-			padding: 0;
-			margin-bottom: 2.7rem;
+			padding: 10%;
+			//margin-bottom: 2.7rem;
+			//padding-bottom: 2rem;
 			padding-top: 2rem;
 			border-top: 1px solid $gray;
 			//
@@ -320,11 +333,15 @@ html, body {
 }
 
 
-// div.row is the css grid wrapper, div.col-* is inside the row (just like vanilla bootstrap),
+// div.row is the css grid wrapper, div.col-* is inside the row (just like normal bootstrap),
 // and takes the css grid coordinates or areas.
 // div.card is nested in a div.col-* and takes the content styling.
 // Nesting the div.card inside div.col-* ensures bootstrap will work if grid is not supported.
 
+
+/////////////////////////////////
+// Homepage grid template & column definitions
+/////////////////////////////////
 
 .css-grid--card {
 	@supports(display: grid) {
@@ -332,7 +349,7 @@ html, body {
 		.row {
 			grid-column-gap: 0;
 			grid-row-gap: 0;
-			padding: 10px;
+			padding: 0px;
 
 			// mobile first default
 			grid-template-columns: 1fr;
@@ -347,23 +364,26 @@ html, body {
         grid-template-columns: 2fr 1fr;
         grid-template-areas:
             "meet-arcadia explore"
-            "meet-arcadia support";
+            "meet-arcadia support"
+            "meet-arcadia .......";
         }
 
       // lg = 992px+
       @include media-breakpoint-up(lg) {
         grid-template-columns: .2fr 2fr 1fr .2fr;
         grid-template-areas:
-            ".... meet-arcadia explore ...."
-            ".... meet-arcadia support ....";
+            "gutter-left meet-arcadia explore gutter-right"
+            "gutter-left meet-arcadia support gutter-right"
+            "gutter-left meet-arcadia ....... gutter-right";
         }
 
       // xl = 1200px+
       @include media-breakpoint-up(xl) {
-        grid-template-columns: .55fr 2fr 1fr .55fr;
+        grid-template-columns: .6fr 3.8fr 2fr 1fr;
         grid-template-areas:
-            ".... meet-arcadia explore ...."
-            ".... meet-arcadia support ....";
+            "gutter-left meet-arcadia explore gutter-right"
+            "gutter-left meet-arcadia support gutter-right"
+            "gutter-left meet-arcadia ....... gutter-right";
         }
 
 			.card {
@@ -382,6 +402,14 @@ html, body {
 // Homepage grid area definitions
 /////////////////////////////////
 
+.gutter-left {
+  grid-area: gutter-left;
+}
+
+.gutter-right {
+  grid-area: gutter-right;
+}
+
 .meet-arcadia {
   grid-area: meet-arcadia;
 }
@@ -394,16 +422,18 @@ html, body {
 
 .explore {
   grid-area: explore;
+  background-color: $arc-bg-darker;
 }
 
 
 .support {
   grid-area: support;
+  background-color: $arc-bg-darker;
 }
 
 
 ////////////////////////////////
-		//Alerts//
+// Alerts
 ////////////////////////////////
 
 // bootstrap alert CSS, translated to the django-standard levels of

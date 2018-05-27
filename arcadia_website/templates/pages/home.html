@@ -16,10 +16,15 @@
       <!--div.row is the css-grid wrapper-->
       <div class="row" role="main">
           <!--The column is for bootstrap, meet-arcadia points to the grid-area name we use to -->
+          <div class="col-sm-11 col-md-10 col-lg-8 gutter-right">
+              <div class="card">
+              </div>
+          </div>
+
           <div class="col-12 col-sm-11 col-md-10 col-lg-8 mx-auto meet-arcadia">
               <div class="card main-content" role="section">
                 <div class="meet-header">
-                  <h2 class="meet-title font-family-sans-serif">Meet Arcadia TEST</h2>
+                  <h2 class="meet-title font-family-sans-serif">Meet Arcadia</h2>
                   <p>Arcadia promotes community health in Middle Tennessee.
                     We support projects focused on creative land sharing, cutting-edge perennial farming, and ecological land stewardship.</p>
 
@@ -80,7 +85,7 @@
           <div class="col-12 col-sm-11 col-md-10 col-lg-8 mx-auto explore">
               <div class="card">
                 <h2>Explore ongoing projects</h2>
-                <p> Learn the details of our ongoing projects, how you can get involved, and the steps for launching a new project with Arcadia.</p>
+                <p> Learn about ongoing projects, how you can get involved, and how to start new projects with Arcadia.</p>
                 <a href="{% url 'about' %}" class="btn btn-outline-primary btn-lg arc-btn" role="button">Explore Projects</a>
 
               </div>
@@ -91,6 +96,11 @@
                 <h1>Support Arcadia</h1>
                 <p> <i class="far fa-heart fa-10x"></i></p>
 
+              </div>
+          </div>
+
+          <div class="col-sm-11 col-md-10 col-lg-8 gutter-left">
+              <div class="card">
               </div>
           </div>
 

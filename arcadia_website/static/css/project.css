@@ -6832,6 +6832,9 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 19.2px 0;
   padding: 1.2rem 0; }
 
+.btn-outline-primary {
+  color: #6f965e; }
+
 nav.navbar-light {
   background: #3C3F50; }
 
@@ -6888,6 +6891,9 @@ html, body {
     padding-top: 1.5rem;
     font-size: 16px;
     font-size: 1rem; }
+
+.homepage-content .gutter-right {
+  background-color: #F8F7FA; }
 
 .homepage-content .main-content {
   height: 100%; }
@@ -6982,8 +6988,7 @@ html, body {
     .css-grid-container div[class^="col-"] {
       max-width: 100% !important;
       width: 100% !important;
-      padding: 0;
-      margin-bottom: 2.7rem;
+      padding: 10%;
       padding-top: 2rem;
       border-top: 1px solid #CFE3DC; }
     .css-grid-container .row {
@@ -6997,7 +7002,7 @@ html, body {
   .css-grid--card .row {
     grid-column-gap: 0;
     grid-row-gap: 0;
-    padding: 10px;
+    padding: 0px;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     grid-template-areas: "meet-arcadia" "explore" "support"; }
@@ -7005,20 +7010,26 @@ html, body {
       .css-grid--card .row {
         -ms-grid-columns: 2fr 1fr;
             grid-template-columns: 2fr 1fr;
-        grid-template-areas: "meet-arcadia explore" "meet-arcadia support"; } }
+        grid-template-areas: "meet-arcadia explore" "meet-arcadia support" "meet-arcadia ......."; } }
     @media (min-width: 992px) {
       .css-grid--card .row {
         -ms-grid-columns: .2fr 2fr 1fr .2fr;
             grid-template-columns: .2fr 2fr 1fr .2fr;
-        grid-template-areas: ".... meet-arcadia explore ...." ".... meet-arcadia support ...."; } }
+        grid-template-areas: "gutter-left meet-arcadia explore gutter-right" "gutter-left meet-arcadia support gutter-right" "gutter-left meet-arcadia ....... gutter-right"; } }
     @media (min-width: 1200px) {
       .css-grid--card .row {
-        -ms-grid-columns: .55fr 2fr 1fr .55fr;
-            grid-template-columns: .55fr 2fr 1fr .55fr;
-        grid-template-areas: ".... meet-arcadia explore ...." ".... meet-arcadia support ...."; } }
+        -ms-grid-columns: .6fr 3.8fr 2fr 1fr;
+            grid-template-columns: .6fr 3.8fr 2fr 1fr;
+        grid-template-areas: "gutter-left meet-arcadia explore gutter-right" "gutter-left meet-arcadia support gutter-right" "gutter-left meet-arcadia ....... gutter-right"; } }
     .css-grid--card .row .card {
       height: 100%;
       margin-bottom: 0; } }
+
+.gutter-left {
+  grid-area: gutter-left; }
+
+.gutter-right {
+  grid-area: gutter-right; }
 
 .meet-arcadia {
   grid-area: meet-arcadia; }
@@ -7027,10 +7038,12 @@ html, body {
   grid-area: newsletter; }
 
 .explore {
-  grid-area: explore; }
+  grid-area: explore;
+  background-color: #F8F7FA; }
 
 .support {
-  grid-area: support; }
+  grid-area: support;
+  background-color: #F8F7FA; }
 
 .alert-debug {
   background-color: #fff;
