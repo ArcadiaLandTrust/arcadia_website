@@ -134,6 +134,7 @@ html, body {
   //border: 4px solid pink !important;
   //border-bottom: 1px solid $gray;
   padding: 4rem 10px 3rem 10px;
+  background-color: $arc-yellow-light;
 
   .banner-header {
     font-family: $arc-header;
@@ -169,26 +170,31 @@ html, body {
 
 
 /////////////////////////////////
-// Homepage Main Content
+// Homepage Main Content Styling (vvvv Do your aesthetic stuff here! vvvv)
 /////////////////////////////////
 
 .homepage-content{
 
   .gutter-left {
-
+    background-color: $arc-green;
   }
 
   .gutter-right {
-    background-color: $arc-bg-darker;
+    background-color: $arc-purple-light;
   }
 
   .meet-arcadia {
+    background-color: $arc-purple-light;
   }
 
   .main-content {
     //padding-bottom: 40px;
     //margin-bottom: 40px;
     height: 100%;
+  }
+
+  .explore {
+    background-color: $arc-green-light;
   }
 
   .meet-header {
@@ -198,7 +204,7 @@ html, body {
       line-height: 2.2rem;
       width: 97%;
       margin-bottom: .75rem;
-      //letter-spacing: -.1px;
+      letter-spacing: .2px;
     }
 
   }
@@ -222,6 +228,11 @@ html, body {
       font-size: 1.6rem;
       font-weight: 400;
 
+      .list-titles {
+        top: -5rem;
+        left: 4rem;
+        position: relative;
+      }
       i {
         left: 0rem;
         margin-right: 1rem;
@@ -313,7 +324,7 @@ html, body {
 		div[class^="col-"] {
 			max-width: 100% !important;
 			width: 100% !important;
-			padding: 10%;
+			padding: 1rem 10% 5rem 10%;
 			//margin-bottom: 2.7rem;
 			//padding-bottom: 2rem;
 			padding-top: 2rem;
@@ -372,23 +383,23 @@ html, body {
       @include media-breakpoint-up(lg) {
         grid-template-columns: .2fr 2fr 1fr .2fr;
         grid-template-areas:
-            "gutter-left meet-arcadia explore gutter-right"
-            "gutter-left meet-arcadia support gutter-right"
-            "gutter-left meet-arcadia ....... gutter-right";
+            "gutter-left explore meet-arcadia gutter-right"
+            "gutter-left explore meet-arcadia gutter-right"
+            "gutter-left explore support gutter-right";
         }
 
       // xl = 1200px+
       @include media-breakpoint-up(xl) {
         grid-template-columns: .6fr 3.8fr 2fr 1fr;
         grid-template-areas:
-            "gutter-left meet-arcadia explore gutter-right"
-            "gutter-left meet-arcadia support gutter-right"
-            "gutter-left meet-arcadia ....... gutter-right";
+            "gutter-left explore meet-arcadia gutter-right"
+            "gutter-left explore meet-arcadia gutter-right"
+            "gutter-left explore support gutter-right";
         }
 
 			.card {
 				//only if you want your cards to stretch to 100% height of the grid container - otherwise reset to auto;
-				height: 100%;
+				height: auto;
 				margin-bottom: 0;
 			}
     }
@@ -422,13 +433,12 @@ html, body {
 
 .explore {
   grid-area: explore;
-  background-color: $arc-bg-darker;
 }
 
 
 .support {
   grid-area: support;
-  background-color: $arc-bg-darker;
+  background-color: $arc-white-darker;
 }
 
 
