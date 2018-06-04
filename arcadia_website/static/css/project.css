@@ -6866,7 +6866,7 @@ html, body {
   margin-top: 0;
   padding: 64px 10px 48px 10px;
   padding: 4rem 10px 3rem 10px;
-  background-color: #FCFFBC; }
+  background-color: #FEFFF1; }
   .banner-container .banner-header {
     font-family: Quando;
     color: #3C3F50; }
@@ -6894,7 +6894,7 @@ html, body {
     font-size: 1.2rem; }
 
 .homepage-content .gutter-left {
-  background-color: #acdc98; }
+  background-color: #DCE7D5; }
 
 .homepage-content .gutter-right {
   background-color: #DBD4EC; }
@@ -6928,15 +6928,15 @@ html, body {
   padding: 0; }
 
 .homepage-content dl dt {
-  border-top: 1px solid #CFE3DC;
+  border-top: 1px solid #F1EDFB;
   padding: 25.6px 0 0 0px;
   padding: 1.6rem 0 0 0rem;
   font-size: 25.6px;
   font-size: 1.6rem;
   font-weight: 400; }
   .homepage-content dl dt .list-titles {
-    top: -80px;
-    top: -5rem;
+    top: -48px;
+    top: -3rem;
     left: 64px;
     left: 4rem;
     position: relative; }
