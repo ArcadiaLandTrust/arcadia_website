@@ -6933,12 +6933,13 @@ html, body {
   padding: 1.6rem 0 0 0rem;
   font-size: 25.6px;
   font-size: 1.6rem;
-  font-weight: 400; }
+  font-weight: 400;
+  width: 93%; }
   .homepage-content dl dt .list-titles {
-    top: -46.4px;
-    top: -2.9rem;
-    left: 64px;
-    left: 4rem;
+    top: -51.2px;
+    top: -3.2rem;
+    left: 72px;
+    left: 4.5rem;
     position: relative; }
   .homepage-content dl dt i {
     left: 0px;
@@ -6951,17 +6952,17 @@ html, body {
     padding-right: 0rem;
     position: relative;
     text-align: center;
-    font-size: 27px;
+    font-size: 37px;
     background: #a08bc5;
     color: #bfcafa;
     border-radius: 25px;
     border: 4px solid #bfcafa;
-    width: 52.8px;
-    width: 3.3rem;
-    height: 52.8px;
-    height: 3.3rem;
-    line-height: 38.4px;
-    line-height: 2.4rem; }
+    width: 62.4px;
+    width: 3.9rem;
+    height: 62.4px;
+    height: 3.9rem;
+    line-height: 51.2px;
+    line-height: 3.2rem; }
 
 .homepage-content dl dd {
   box-sizing: content-box;
@@ -7032,8 +7033,8 @@ html, body {
         grid-template-areas: "meet-arcadia explore" "meet-arcadia support" "meet-arcadia ......."; } }
     @media (min-width: 992px) {
       .css-grid--card .row {
-        -ms-grid-columns: .2fr 2fr 1fr .2fr;
-            grid-template-columns: .2fr 2fr 1fr .2fr;
+        -ms-grid-columns: .2fr 2fr 1.5fr .2fr;
+            grid-template-columns: .2fr 2fr 1.5fr .2fr;
         grid-template-areas: "gutter-left explore meet-arcadia gutter-right" "gutter-left explore meet-arcadia gutter-right" "gutter-left explore support gutter-right"; } }
     @media (min-width: 1200px) {
       .css-grid--card .row {
