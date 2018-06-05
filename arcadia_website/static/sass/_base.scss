@@ -229,7 +229,7 @@ html, body {
       font-weight: 400;
 
       .list-titles {
-        top: -3rem;
+        top: -2.9rem;
         left: 4rem;
         position: relative;
       }
@@ -253,10 +253,12 @@ html, body {
 
     dd {
       box-sizing: content-box;
-      padding: 1.3rem 0 1rem;
+      padding: 0rem 0 1rem;
+      margin-top: -1rem;
     }
 
   }
+
 
 }
 

@@ -6935,8 +6935,8 @@ html, body {
   font-size: 1.6rem;
   font-weight: 400; }
   .homepage-content dl dt .list-titles {
-    top: -48px;
-    top: -3rem;
+    top: -46.4px;
+    top: -2.9rem;
     left: 64px;
     left: 4rem;
     position: relative; }
@@ -6965,8 +6965,10 @@ html, body {
 
 .homepage-content dl dd {
   box-sizing: content-box;
-  padding: 20.8px 0 16px;
-  padding: 1.3rem 0 1rem; }
+  padding: 0px 0 16px;
+  padding: 0rem 0 1rem;
+  margin-top: -16px;
+  margin-top: -1rem; }
 
 .footer-main {
   background-color: #3C3F50;
