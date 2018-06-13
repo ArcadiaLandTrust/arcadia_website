@@ -195,6 +195,13 @@ html, body {
 
   .explore {
     background-color: $arc-green-light;
+
+    .explore-card {
+      border: 1px solid;
+      box-shadow: 1px solid #fff;
+    }
+
+
   }
 
   .meet-header {

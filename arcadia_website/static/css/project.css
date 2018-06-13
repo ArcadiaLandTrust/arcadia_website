@@ -6907,6 +6907,9 @@ html, body {
 
 .homepage-content .explore {
   background-color: #DCE7D5; }
+  .homepage-content .explore .explore-card {
+    border: 1px solid;
+    box-shadow: 1px solid #fff; }
 
 .homepage-content .meet-header {
   margin: 8px 0 41.6px 0;

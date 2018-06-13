@@ -2,8 +2,6 @@
 {% load static i18n compress %}
 {% block content %}
 
-<!--TODO: bigger font for paragraphs on meet arcadia section-->
-
   <div class="container-fluid banner-container text-center">
     <h1 class="banner-header banner-title my-auto">Arcadia</h1>
     <h6 class="banner-header banner-sub-header my-auto">a community land trust</h6>
@@ -95,7 +93,16 @@
           <div class="col-12 col-sm-11 col-md-10 col-lg-8 mx-auto explore">
               <div class="card">
                 <h2>Featured projects</h2>
-                <p> Learn about ongoing & future projects, how you can get involved, and how to start new projects with Arcadia.</p>
+                <p> Learn about ongoing & prospective projects and how you can support them.</p>
+
+              </div>
+              <div class="card explore-card">
+                  <h2>Sweeter Days Farm</h2>
+                  <p> Installing an alley cropping and perennial agriculture CSA to serve Ashland City and Clarksville.</p>
+                  <a href="{% url 'about' %}" class="btn btn-outline-primary btn-lg arc-btn" role="button">More >></a>
+
+                </div>
+              <div class="card">
                 <a href="{% url 'about' %}" class="btn btn-outline-primary btn-lg arc-btn" role="button">Explore All Projects >></a>
 
               </div>
