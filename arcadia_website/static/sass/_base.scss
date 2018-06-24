@@ -199,6 +199,8 @@ html, body {
     .explore-card {
       border: 1px solid;
       box-shadow: 1px solid #fff;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
     }
 
 

@@ -6909,7 +6909,11 @@ html, body {
   background-color: #DCE7D5; }
   .homepage-content .explore .explore-card {
     border: 1px solid;
-    box-shadow: 1px solid #fff; }
+    box-shadow: 1px solid #fff;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr; }
 
 .homepage-content .meet-header {
   margin: 8px 0 41.6px 0;
