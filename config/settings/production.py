@@ -78,7 +78,7 @@ INSTALLED_APPS += ['storages', ]
 AWS_ACCESS_KEY_ID = env('DJANGO_AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = env('DJANGO_AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = env('DJANGO_AWS_STORAGE_BUCKET_NAME')
-AWS_AUTO_CREATE_BUCKET = True
+AWS_AUTO_CREATE_BUCKET = False
 AWS_QUERYSTRING_AUTH = False
 
 # AWS cache settings, don't change unless you know what you're doing:
@@ -101,7 +101,7 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 # Static Assets
 # ------------------------
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 # COMPRESSOR
 # ------------------------------------------------------------------------------
 COMPRESS_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'

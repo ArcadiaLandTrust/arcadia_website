@@ -6912,8 +6912,10 @@ html, body {
     box-shadow: 1px solid #fff;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr; }
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 2fr 2fr;
+        grid-template-rows: 1fr 2fr 2fr; }
 
 .homepage-content .meet-header {
   margin: 8px 0 41.6px 0;
