@@ -106,8 +106,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # ------------------------------------------------------------------------------
 COMPRESS_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 COMPRESS_URL = STATIC_URL
-COMPRESS_ENABLED = env.bool('COMPRESS_ENABLED', default=False)
-# COMPRESS_ENABLED = env.bool('COMPRESS_ENABLED', default=True)
+COMPRESS_ENABLED = env.bool('COMPRESS_ENABLED', default=True)
+# COMPRESS_ENABLED = env.bool('COMPRESS_ENABLED', default=False)
 
 # EMAIL
 # ------------------------------------------------------------------------------
