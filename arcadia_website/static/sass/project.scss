@@ -5,6 +5,7 @@
 // When optimizing your site for production, comment out import of all bootstrap components not being used
 // This reduces the compiled CSS size meaning faster load times.
 
+
 ///// Project component partials
 // Import your project base & component partials
 //
@@ -60,16 +61,15 @@
 @import "../../../node_modules/bootstrap/scss/print";
 
 
-
 //////////////////////////////////////// Base scss
 //
 // Contains the meat of your scss
 @import "base";
 
+
 ////////////////////////////////////////////////Third party Sass components
 // Third party sass components (e.g. icons)
 //
-
 
 // Font awesome
 //
@@ -77,4 +77,3 @@
 @import "fontawesome/fa-solid";
 @import "fontawesome/fa-regular";
 @import "fontawesome/fa-brands";
-

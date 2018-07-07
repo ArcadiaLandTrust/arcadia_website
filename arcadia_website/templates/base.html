@@ -1,4 +1,5 @@
-{% load static i18n compress %}<!DOCTYPE html>
+{% load static compress %}
+<!DOCTYPE html>
 
 <!--TODO: navbar-- add new links for news & blog -->
 <!--TODO: add mastodon icon to footer social media links-->
@@ -8,7 +9,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>{% block title %}Arcadia: a community land trust{% endblock title %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Website for Arcadia">
+  <meta name="description" content="Website for Arcadia Land Trust">
   <meta name="author" content="Arcadia">
 
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -18,11 +19,12 @@
 
   {% block css %}
   <!-- Your stuff: Third-party CSS libraries go here -->
-  {% compress css %}
+
+  <!--{% compress css %}-->
 
   <link href="{% static 'css/project.min.css' %}" rel="stylesheet">
 
-  {% endcompress %}
+  <!--{% endcompress %}-->
 
   <!--favicon link-->
   <link rel="icon" type="image/png" href="{% static 'images/favicon.ico' %}">
