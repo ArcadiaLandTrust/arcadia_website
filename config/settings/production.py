@@ -98,15 +98,20 @@ MEDIA_URL = 'https://s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
 # DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 DEFAULT_FILE_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+
 # Static Assets
 # ------------------------
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+
 # COMPRESSOR
 # ------------------------------------------------------------------------------
+
 COMPRESS_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 COMPRESS_URL = STATIC_URL
-COMPRESS_ENABLED = env.bool('COMPRESS_ENABLED', default=True)
+# this is not working when enabled, need to troubleshoot and figure it out.
+COMPRESS_ENABLED = env.bool('COMPRESS_ENABLED', default=False)
 # COMPRESS_ENABLED = env.bool('COMPRESS_ENABLED', default=False)
 
 # EMAIL
